@@ -30,7 +30,7 @@ function ProductDetails() {
   const { cart, setCart } = useContext(CartContext);
 
   useEffect(() => {
-    async function fetchBeer() {
+    async function fetchProduct() {
       try {
         const response = await api.get(`/products/${id}`);
 
@@ -39,7 +39,7 @@ function ProductDetails() {
         console.error(err);
       }
     }
-    fetchBeer();
+    fetchProduct();
   }, [id]);
 
   return (
@@ -59,7 +59,7 @@ function ProductDetails() {
       <img
         className="card-img product-img mx-auto mt-2"
         src={state.image_url}
-        alt="beer"
+        alt="product-image"
       />
       <div className="card-body">
         <h4 className="card-title">
