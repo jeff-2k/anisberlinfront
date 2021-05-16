@@ -1,3 +1,6 @@
+import './Navbar.css'
+
+import Logo from "./images/logo.png"
 import { NavLink } from "react-router-dom";
 import { Dropdown } from "react-bootstrap";
 import { useContext } from "react";
@@ -10,12 +13,7 @@ function Navbar() {
   const { loggedInUser, setLoggedInUser } = useContext(AuthContext);
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-      <div className="ml-3">
-        <NavLink className="navbar-brand" to="/">
-          Ironbeers Store
-        </NavLink>
-      </div>
+    <nav className="navbar navbar-expand-lg  ">
 
       <button
         className="navbar-toggler"
@@ -33,11 +31,6 @@ function Navbar() {
         id="navbarText"
       >
         <ul className="navbar-nav mr-auto">
-          <li className="nav-item">
-            <NavLink className="nav-link" activeClassName="active" to="/">
-              Home
-            </NavLink>
-          </li>
           {/* Esconder o link de quem não for Admin */}
           {loggedInUser.user.role === "ADMIN" ? (
             <li className="nav-item">
@@ -53,10 +46,17 @@ function Navbar() {
 
           <li className="nav-item">
             <NavLink className="nav-link" activeClassName="active" to="/all">
-              All Beers
+              All Products
             </NavLink>
           </li>
         </ul>
+
+        <div className="ml-3">
+        <NavLink className="navbar-brand" to="/">
+          <img src={Logo} alt="logo" />
+        </NavLink>
+      </div>
+        
         <div className="mr-3">
           {loggedInUser.user.name ? (
             <div className="d-flex align-items-center">

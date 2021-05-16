@@ -2,6 +2,23 @@ import { Link } from "react-router-dom";
 import "./ProductCard.css";
 
 function ProductCard(props) {
+
+  // function renderIcons(product){
+  //   console.log(props.product)
+  //   switch(props.product){
+  //     case props.product.glutenFree === "yes":
+  //       return <img src="../anis_icons/icons_sem gluten-p.png" alt="gluten-free" />;
+  //     case (props.product.lactoseFree) === "yes":
+  //       return <img src="../anis_icons/icons_sem lactose-p.png" alt="lactose-free" />;
+  //     case (props.product.sugarFree) === "yes":
+  //       return <img src="../anis_icons/icons_sem caseina-p.png" alt="sugar-free" />;
+  //     case (props.product.caseinFree) === "yes":
+  //         return <img src="../anis_icons/icons_sem caseina-p.png" alt="casein-free" />;
+  //     case (props.product.vegan) === "yes":
+  //         return <img src="../anis_icons/icons_vegan-p.png" alt="vegan-free" />;  
+  //   }
+  //   }
+
   return (
     <Link
       className="text-decoration-none "
@@ -26,7 +43,13 @@ function ProductCard(props) {
             className="card-title card-title-fixed-height text-truncate"
           >
             <small>{props.product.name}</small>
+
+            <div className="card-icon">
+        {/* {renderIcons(props.product)} */}
+        </div>
           </h4>
+
+        
 
           <h3 className="card-text">
             {Number(props.product.price).toLocaleString(
