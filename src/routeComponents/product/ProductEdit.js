@@ -23,7 +23,7 @@ function ProductEdit() {
 
   // Pré-popula o formulário com os dados do produto através do id da URL
   useEffect(() => {
-    async function fetchBeer() {
+    async function fetchProduct() {
       try {
         const response = await api.get(`/products/${id}`);
 
@@ -33,7 +33,7 @@ function ProductEdit() {
         console.error(err);
       }
     }
-    fetchBeer();
+    fetchProduct();
   }, [id]);
 
   function handleChange(event) {

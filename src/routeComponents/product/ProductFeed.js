@@ -3,27 +3,27 @@ import ProductCard from "./ProductCard";
 import api from "../../apis/index";
 
 function ProductFeed() {
-  const [beers, setBeers] = useState([]);
+  const [product, setProducts] = useState([]);
 
   useEffect(() => {
-    async function fetchBeers() {
+    async function fetchProduct() {
       try {
         const response = await api.get("/products");
 
-        setBeers([...response.data]);
+        setProducts([...response.data]);
       } catch (err) {
         console.error(err);
       }
     }
-    fetchBeers();
+    fetchProduct();
   }, []);
 
   return (
     <div className="row">
-      {beers.map((beer) => {
+      {product.map((product) => {
         return (
-          <div key={beer._id} className="col-12 col-sm-4 col-md-3">
-            <ProductCard beer={beer} />
+          <div key={product._id} className="col-12 col-sm-4 col-md-3">
+            <ProductCard product={product} />
           </div>
         );
       })}
