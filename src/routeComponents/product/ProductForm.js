@@ -2,7 +2,7 @@ function ProductForm(props) {
   return (
     <form className="mb-5" onSubmit={props.handleSubmit}>
       <div className="form-group">
-        <label htmlFor="productFormName">Beer Name</label>
+        <label htmlFor="productFormName">Produto</label>
         <input
           type="text"
           className="form-control"
@@ -13,31 +13,7 @@ function ProductForm(props) {
         />
       </div>
       <div className="form-group">
-        <label htmlFor="productFormTagline">Tagline</label>
-        <input
-          type="text"
-          className="form-control"
-          id="productFormTagline"
-          name="tagline"
-          onChange={props.handleChange}
-          value={props.state.tagline}
-        />
-      </div>
-
-      <div className="form-group">
-        <label htmlFor="productFormFirstBrewed">First Brewed In</label>
-        <input
-          type="text"
-          className="form-control"
-          id="productFormFirstBrewed"
-          name="first_brewed"
-          onChange={props.handleChange}
-          value={props.state.first_brewed}
-        />
-      </div>
-
-      <div className="form-group">
-        <label htmlFor="productFormDescription">Description</label>
+        <label htmlFor="productFormDescription">Descrição</label>
         <input
           type="text"
           className="form-control"
@@ -48,84 +24,75 @@ function ProductForm(props) {
         />
       </div>
 
-      <div className="form-group">
-        <label htmlFor="productFormImage">Beer Picture</label>
-        <input
-          type="file"
-          className="form-control"
-          id="productFormImage"
-          name="image_url"
-          onChange={props.handleChange}
-        />
-      </div>
 
-      <div className="form-group">
-        <label htmlFor="productFormAbv">Alcohol by volume (ABV%)</label>
-        <input
-          type="number"
-          className="form-control"
-          id="productFormAbv"
-          name="abv"
-          onChange={props.handleChange}
-          value={props.state.abv}
-        />
-      </div>
-
-      <div className="form-group">
-        <label htmlFor="productFormFoodPairing">Food Pairings</label>
-        <input
-          type="text"
-          className="form-control"
-          id="productFormFoodPairing"
-          name="food_pairing"
-          onChange={props.handleChange}
-          value={props.state.food_pairing}
-        />
-      </div>
 
       <div className="form-row">
-        <div className="form-group col">
-          <label htmlFor="productFormAuthor">Contributed By (Author)</label>
+        <div className="form-group">
+          <label htmlFor="productGlutenFree">Contém Glúten?</label>
           <input
             type="text"
             className="form-control"
-            id="productFormAuthor"
-            name="contributed_by"
+            id="productGlutenFree"
+            name="glutenFree"
             onChange={props.handleChange}
-            value={props.state.contributed_by}
+            value={props.state.glutenFree}
           />
         </div>
 
-        <div className="form-group col">
-          <label htmlFor="productFormExpireDate">Expiration Date</label>
+        <div className="form-group">
+          <label htmlFor="productFormLactoseFree">Contém lactose?</label>
           <input
-            type="date"
+            type="text"
             className="form-control"
-            id="productFormExpireDate"
-            name="expire_date"
+            id="productFormLactoseFree"
+            name="lactoseFree"
             onChange={props.handleChange}
-            value={props.state.expire_date}
+            value={props.state.lactoseFree}
           />
         </div>
-      </div>
 
+        <div className="form-group">
+          <label htmlFor="productFormSugarFree">Contém açúcar?</label>
+          <input
+            type="text"
+            className="form-control"
+            id="productFormSugarFree"
+            name="sugarFree"
+            onChange={props.handleChange}
+            value={props.state.sugarFree}
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="productFormCaseinFree">Contém Caseína?</label>
+          <input
+            type="text"
+            className="form-control"
+            id="productFormCaseinFree"
+            name="abv"
+            onChange={props.handleChange}
+            value={props.state.caseinFree}
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="productFormVegan">Vegetariano?</label>
+          <input
+            type="text"
+            className="form-control"
+            id="productFormVegan"
+            name="vegan"
+            onChange={props.handleChange}
+            value={props.state.vegan}
+          />
+        </div>
+        
+      </div>
       <div className="form-row">
         <div className="form-group col">
-          <label htmlFor="productFormCost">Cost</label>
+          <label htmlFor="productFormPrice">Preço</label>
           <input
-            type="number"
-            className="form-control"
-            id="productFormCost"
-            name="cost"
-            onChange={props.handleChange}
-            value={props.state.cost}
-          />
-        </div>
-
-        <div className="form-group col">
-          <label htmlFor="productFormPrice">Price</label>
-          <input
-            type="number"
+            type="text"
             className="form-control"
             id="productFormPrice"
             name="price"
@@ -134,31 +101,18 @@ function ProductForm(props) {
           />
         </div>
 
-        <div className="form-group col">
-          <label htmlFor="productFormVolume">Volume (ml)</label>
+        <div className="form-group">
+          <label htmlFor="productFormImage">Imagem</label>
           <input
-            type="number"
+            type="file"
             className="form-control"
-            id="productFormVolume"
-            name="volume"
+            id="productFormImage"
+            name="image_url"
             onChange={props.handleChange}
-            value={props.state.volume}
           />
         </div>
 
-        <div className="form-group col">
-          <label htmlFor="productFormQttInStock">Quantity in Stock</label>
-          <input
-            type="number"
-            className="form-control"
-            id="productFormQttInStock"
-            name="qtt_in_stock"
-            onChange={props.handleChange}
-            value={props.state.qtt_in_stock}
-          />
-        </div>
       </div>
-
       <hr />
       <button type="submit" className="btn btn-primary">
         Submit

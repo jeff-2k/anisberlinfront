@@ -9,14 +9,14 @@ function ProductCard(props) {
       to={`/product/${props.beer._id}`}
     >
       <div
-        className="card card-fixed-height text-dark shadow rounded border-0 m-2"
+        className="card card-fixed-height text-dark shadow rounded border-0 m-1"
         style={{ width: "100%" }}
       >
         <div className="card-img-container d-flex justify-content-center align-items-center">
           <img
             className="card-img product-img"
             src={props.beer.image_url}
-            alt="beer"
+            alt="Doce"
           />
         </div>
 
@@ -31,23 +31,23 @@ function ProductCard(props) {
           <h3 className="card-text">
             {Number(props.beer.price).toLocaleString(
               window.navigator.languages[0],
-              { style: "currency", currency: "USD" }
+              { style: "currency", currency: "EUR" }
             )}
           </h3>
           <p className="mb-0">
-            <small className="card-text">{props.beer.volume}ml</small>
+            <small className="card-text">{props.beer.description}</small>
           </p>
 
           <p className="card-text mb-0 text-truncate">
             <small>{props.beer.tagline}</small>
           </p>
           <p className="card-text mb-0">
-            <small>
+            {/* <small>
               <strong>Created by:</strong>{" "}
               {props.beer.contributed_by
                 ? props.beer.contributed_by.split("<")[0]
                 : ""}
-            </small>
+            </small> */}
           </p>
         </div>
       </div>

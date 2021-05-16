@@ -8,20 +8,16 @@ import ConfirmationModal from "../../components/ConfirmationModal";
 
 function ProductDetails() {
   const [state, setState] = useState({
-    image_url: "",
-    food_pairing: [],
-    _id: "",
     name: "",
-    tagline: "",
-    first_brewed: "",
     description: "",
-    abv: 0,
-    contributed_by: "",
-    cost: 0,
+    glutenFree: "",
+    lactoseFree: "",
+    sugarFree: "",
+    caseinFree: "",
+    vegan: "",    
     price: 0,
-    qtt_in_stock: 0,
-    volume: 0,
-    expire_date: "",
+    image_url: "",
+    transactions: "",  
   });
   const [showModal, setShowModal] = useState(false);
   const [quantity, setQuantity] = useState(0);
@@ -36,7 +32,7 @@ function ProductDetails() {
   useEffect(() => {
     async function fetchBeer() {
       try {
-        const response = await api.get(`/product/${id}`);
+        const response = await api.get(`/products/${id}`);
 
         setState({ ...response.data });
       } catch (err) {
@@ -70,56 +66,34 @@ function ProductDetails() {
           <small>{state.name}</small>
         </h4>
 
+        <p>
+        <small> {state.description}</small>
+        </p>
+        
+        <p>
+          <small>Gluten Free {state.glutenFree}</small>
+        </p>
+        <p>
+        <small>Lactose Free {state.lactoseFree}</small>
+        </p>
+        <p>
+        <small>Sugar Free {state.sugarFree}</small>
+        </p>
+        <p>
+        <small>Casein Free {state.caseinFree}</small>
+        </p>
+        <p>
+        <small>Vegan {state.vegan}</small>
+        </p>
+
+        
+
         <h3 className="card-text">
           {Number(state.price).toLocaleString(window.navigator.languages[0], {
             style: "currency",
-            currency: "USD",
+            currency: "EUR",
           })}
         </h3>
-
-        <p>
-          <small>In stock: {state.qtt_in_stock} units</small>
-        </p>
-
-        <p className="mb-0">
-          <small className="card-text">{state.volume}ml</small>
-        </p>
-
-        <p>
-          <small>Alcohol by volume: {state.abv}%</small>
-        </p>
-
-        <p>
-          <small>
-            Expire Date: {new Date(state.expire_date).toLocaleString()}
-          </small>
-        </p>
-
-        <p className="card-text mb-0">
-          <small>{state.tagline}</small>
-        </p>
-
-        <p className="card-text mb-0">
-          <small>{state.description}</small>
-        </p>
-
-        <p>
-          <strong>Food Pairings</strong>
-        </p>
-        <ul>
-          {state.food_pairing.map((food) => (
-            <li key={food}>
-              <small>{food}</small>
-            </li>
-          ))}
-        </ul>
-
-        <p className="card-text mb-3">
-          <small>
-            <strong>Created by:</strong>
-            {state.contributed_by ? state.contributed_by.split("<")[0] : ""}
-          </small>
-        </p>
 
         <div className="form-group d-inline-block mr-3">
           <label htmlFor="productDetailQuantity">Quantity: </label>

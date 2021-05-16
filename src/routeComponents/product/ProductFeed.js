@@ -8,7 +8,7 @@ function ProductFeed() {
   useEffect(() => {
     async function fetchBeers() {
       try {
-        const response = await api.get("/product");
+        const response = await api.get("/products");
 
         setBeers([...response.data]);
       } catch (err) {

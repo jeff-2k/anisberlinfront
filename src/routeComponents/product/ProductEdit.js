@@ -7,18 +7,15 @@ import ProductForm from "./ProductForm";
 function ProductEdit() {
   const [state, setState] = useState({
     name: "",
-    tagline: "",
-    first_brewed: "",
     description: "",
-    image_url: "",
-    abv: 0,
-    food_pairing: [],
-    contributed_by: "",
-    cost: 0,
+    glutenFree: "",
+    lactoseFree: "",
+    sugarFree: "",
+    caseinFree: "",
+    vegan: "",    
     price: 0,
-    qtt_in_stock: 0,
-    volume: 0,
-    expire_date: "",
+    image_url: "",
+    transactions: "",  
   });
 
   const { id } = useParams();
@@ -28,7 +25,7 @@ function ProductEdit() {
   useEffect(() => {
     async function fetchBeer() {
       try {
-        const response = await api.get(`/product/${id}`);
+        const response = await api.get(`/products/${id}`);
 
         console.log(response.data);
         setState({ ...response.data });
@@ -74,7 +71,7 @@ function ProductEdit() {
         uploadedImageUrl = await handleFileUpload(state.image_url);
       }
 
-      const response = await api.put(`/product/${id}`, {
+      const response = await api.put(`/products/${id}`, {
         ...state,
         image_url: uploadedImageUrl,
       });

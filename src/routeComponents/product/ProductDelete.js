@@ -10,7 +10,7 @@ function ProductDelete() {
   useEffect(() => {
     async function deleteProduct() {
       try {
-        const response = await api.delete(`/product/${id}`);
+        const response = await api.delete(`/products/${id}`);
 
         history.push("/");
       } catch (err) {
