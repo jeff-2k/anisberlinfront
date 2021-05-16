@@ -69,7 +69,7 @@ function ProductForm(props) {
             type="text"
             className="form-control"
             id="productFormCaseinFree"
-            name="abv"
+            name="caseinFree"
             onChange={props.handleChange}
             value={props.state.caseinFree}
           />
