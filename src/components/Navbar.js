@@ -16,11 +16,6 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg d-flex justify-content-center ">
 
-      <div className="ml-5 mr-3">
-        <NavLink className="navbar-brand" to="/">
-          <img src={Logo} alt="logo" />
-        </NavLink>
-      </div>
 
       <button
         className="navbar-toggler"
@@ -35,15 +30,15 @@ function Navbar() {
       </button>
 
       <div
-        className="collapse navbar-collapse d-flex justify-content-between"
+        className="collapse navbar-collapse d-flex justify-content-center"
         id="navbarText"
       >
 
 
-        <ul className="navbar-nav mr-auto">
+        <ul className="navbar-nav mx-auto">
           {/* Esconder o link de quem não for Admin */}
           {loggedInUser.user.role === "ADMIN" ? (
-            <li className="nav-item">
+            <li className="nav-item ">
               <NavLink
                 className="nav-link"
                 activeClassName="active"
@@ -54,14 +49,22 @@ function Navbar() {
             </li>
           ) : null}
 
-          <li className="nav-item">
+          {/* <li className="nav-item">
             <NavLink className="nav-link" activeClassName="active" to="/all">
               All Products
             </NavLink>
-          </li>
+          </li> */}
         </ul>
         
-        <div className="mr-3">
+        <div className="logo d-flex mx-auto">
+          <div className="ml-5 mr-3 d-flex justify-content-center mx-auto">
+            <NavLink className="navbar-brand" to="/">
+            <img src={Logo} alt="logo" />
+            </NavLink>
+         </div>
+        </div>
+
+        <div className="mr-3 mx-auto">
           {loggedInUser.user.name ? (
             <div className="d-flex align-items-center">
               <Cart />
