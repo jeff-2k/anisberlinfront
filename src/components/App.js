@@ -57,8 +57,7 @@ function App() {
               <Route exact path="/order/success" component={OrderSuccess} />
             </Switch>
           </div>
-        </CartContextComponent>
-        
+        </CartContextComponent>        
       </AuthContextComponent>
       <Footer></Footer>
     </BrowserRouter>

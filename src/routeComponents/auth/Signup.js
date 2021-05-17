@@ -21,12 +21,12 @@ const SignupSchema = Yup.object().shape({
     /(\(?\d{2}\)?\s)?(\d{4,5}\-\d{4})/,
     "Invalid phone number"
   ),
-  street: Yup.string().required("Required field"),
+  AddressStreet: Yup.string().required("Required field"),
   neighbourhood: Yup.string().required("Required Field"),
-  city: Yup.string().required("Required Field"),
-  postCode: Yup.string().max(9, "Invalid post code").required("Required Field"),
-  stateOrProvince: Yup.string().required("Required Field"),
-  country: Yup.string().required("Required Field"),
+  AddressCity: Yup.string().required("Required Field"),
+  AddressPostalCode: Yup.string().max(9, "Invalid post code").required("Required Field"),
+  AddressState: Yup.string().required("Required Field"),
+  AddressCountry: Yup.string().required("Required Field"),
 });
 
 function Signup() {
@@ -80,38 +80,23 @@ function Signup() {
         name: "",
         email: "",
         password: "",
+        AddressCountry: "",
+        AddressState: "",
+        AddressPostalCode: "",
+        AddressCity: "",
+        AddressNum: "",
+        AddressStreet: "",
         phoneNumber: "",
-        street: "",
         neighbourhood: "",
-        city: "",
-        postCode: "",
-        stateOrProvince: "",
-        country: "",
       }}
       validationSchema={SignupSchema}
       onSubmit={async (values, { setSubmitting }) => {
         setSubmitting(true);
 
-        const {
-          street,
-          neighbourhood,
-          city,
-          postCode,
-          stateOrProvince,
-          country,
-        } = values;
 
         try {
           const response = await api.post("/signup", {
-            ...values,
-            address: {
-              street,
-              neighbourhood,
-              city,
-              postCode,
-              stateOrProvince,
-              country,
-            },
+            ...values,             
           });
 
           console.log(response);
@@ -197,6 +182,26 @@ function Signup() {
           </div>
 
           <div className="form-group">
+            <label htmlFor="signupFormName">House Number</label>
+            <Field
+              type="text"
+              className={`form-control ${
+                errors.AddressNum && touched.AddressNum ? "is-invalid" : "is-valid"
+              }`}
+              id="signupFormName"
+              name="AddressNum"
+            />
+            <ErrorMessage
+              name="AddressNum"
+              render={(msg) => (
+                <InputFeedback invalid={errors.AddressNum && touched.AddressNum}>
+                  {msg}
+                </InputFeedback>
+              )}
+            />
+          </div>
+
+          <div className="form-group">
             <label htmlFor="signupFormPhoneNumber">Phone Number</label>
             <Field
               type="text"
@@ -228,15 +233,15 @@ function Signup() {
             <Field
               type="text"
               className={`form-control ${
-                errors.postCode && touched.postCode ? "is-invalid" : "is-valid"
+                errors.AddressPostalCode && touched.AddressPostalCode ? "is-invalid" : "is-valid"
               }`}
               id="signupFormPostCode"
-              name="postCode"
+              name="AddressPostalCode"
             />
             <ErrorMessage
-              name="postCode"
+              name="AddressPostalCode"
               render={(msg) => (
-                <InputFeedback invalid={errors.postCode && touched.postCode}>
+                <InputFeedback invalid={errors.AddressPostalCode && touched.AddressPostalCode}>
                   {msg}
                 </InputFeedback>
               )}
@@ -248,15 +253,15 @@ function Signup() {
             <Field
               type="text"
               className={`form-control ${
-                errors.street && touched.street ? "is-invalid" : "is-valid"
+                errors.AddressStreet && touched.AddressStreet ? "is-invalid" : "is-valid"
               }`}
               id="signupFormStreet"
-              name="street"
+              name="AddressStreet"
             />
             <ErrorMessage
-              name="street"
+              name="AddressStreet"
               render={(msg) => (
-                <InputFeedback invalid={errors.street && touched.street}>
+                <InputFeedback invalid={errors.AddressStreet && touched.AddressStreet}>
                   {msg}
                 </InputFeedback>
               )}
@@ -292,15 +297,15 @@ function Signup() {
             <Field
               type="text"
               className={`form-control ${
-                errors.city && touched.city ? "is-invalid" : "is-valid"
+                errors.AddressCity && touched.AddressCity ? "is-invalid" : "is-valid"
               }`}
               id="signupFormCity"
-              name="city"
+              name="AddressCity"
             />
             <ErrorMessage
-              name="city"
+              name="AddressCity"
               render={(msg) => (
-                <InputFeedback invalid={errors.city && touched.city}>
+                <InputFeedback invalid={errors.AddressCity && touched.AddressCity}>
                   {msg}
                 </InputFeedback>
               )}
@@ -312,18 +317,18 @@ function Signup() {
             <Field
               type="text"
               className={`form-control ${
-                errors.stateOrProvince && touched.stateOrProvince
+                errors.AddressState && touched.AddressState
                   ? "is-invalid"
                   : "is-valid"
               }`}
               id="signupFormState"
-              name="stateOrProvince"
+              name="AddressState"
             />
             <ErrorMessage
-              name="stateOrProvince"
+              name="AddressState"
               render={(msg) => (
                 <InputFeedback
-                  invalid={errors.stateOrProvince && touched.stateOrProvince}
+                  invalid={errors.AddressState && touched.AddressState}
                 >
                   {msg}
                 </InputFeedback>
@@ -336,19 +341,19 @@ function Signup() {
             <Field
               type="text"
               className={`form-control ${
-                errors.country && touched.country
+                errors.AddressCountry && touched.AddressCountry
                   ? "is-invalid"
-                  : !errors.country && touched.country
+                  : !errors.AddressCountry && touched.AddressCountry
                   ? "is-valid"
                   : ""
               }`}
               id="signupFormCountry"
-              name="country"
+              name="AddressCountry"
             />
             <ErrorMessage
-              name="country"
+              name="AddressCountry"
               render={(msg) => (
-                <InputFeedback invalid={errors.country && touched.country}>
+                <InputFeedback invalid={errors.AddressCountry && touched.AddressCountry}>
                   {msg}
                 </InputFeedback>
               )}
