@@ -22,7 +22,7 @@ function ProductFeed() {
     <div className="row">
       {product.map((product) => {
         return (
-          <div key={product._id} className="col-12 col-sm-4 col-md-3">
+          <div key={product._id} className="col-12 col-sm-4 col-md-3 mx-auto">
             <ProductCard product={product} />
           </div>
         );

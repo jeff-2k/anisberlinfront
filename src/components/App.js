@@ -9,6 +9,7 @@ import AdminRoute from "../routeComponents/auth/AdminRoute";
 import ForgotPassword from "../routeComponents/auth/ForgotPassword";
 import ResetPassword from "../routeComponents/auth/ResetPassword";
 import Navbar from "./Navbar";
+import Footer from "./Footer"
 
 import ProductFeed from "../routeComponents/product/ProductFeed";
 import ProductDetail from "../routeComponents/product/ProductDetail";
@@ -28,7 +29,6 @@ function App() {
       <AuthContextComponent>
         <CartContextComponent>
           <Navbar />
-
           <div className="container mt-5">
             <Switch>
               <Route exact path="/" component={ProductFeed} />
@@ -58,7 +58,9 @@ function App() {
             </Switch>
           </div>
         </CartContextComponent>
+        
       </AuthContextComponent>
+      <Footer></Footer>
     </BrowserRouter>
   );
 }
