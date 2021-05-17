@@ -8,12 +8,13 @@ function Profile() {
     AddressNum: "",
     AddressCity: "",
     AddressPostalCode: "",
-    // stateOrProvince: "",
-    // country: "",
+    AdressNeighbourhood: "",  
+    stateOrProvince: "",
+    country: "",
     _id: "",
     name: "",
     email: "",
-    // phoneNumber: "",
+    phoneNumber: "",
   });
 
   // O useEffect é um Hook que executa a sua callback (primeiro parâmetro) toda vez que qualquer coisa na sua array de dependências (segundo parâmetro) sofre qualquer tipo de alteração. Caso a array de dependências esteja vazia, o useEffect roda a callback uma vez assim que o componente renderiza na tela (mesmo efeito do componentDidMount)
