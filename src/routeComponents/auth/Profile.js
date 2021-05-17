@@ -73,6 +73,10 @@ function Profile() {
           {state.AddressCity}
         </li>
         <li>
+          <strong>Neighbourhood: </strong>
+          {state.neighbourhood}
+        </li>
+        <li>
           <strong>State or Province: </strong>
           {state.AddressState}
         </li>
