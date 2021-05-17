@@ -22,7 +22,7 @@ function Checkout() {
       const tempState = [];
 
       for (let productInCart of cart) {
-        const response = await api.get(`/product/${productInCart.productId}`);
+        const response = await api.get(`/products/${productInCart.productId}`);
 
         const { _id, image_url, price, name } = response.data;
 

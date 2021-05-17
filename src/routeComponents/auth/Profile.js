@@ -4,18 +4,16 @@ import api from "../../apis/index";
 
 function Profile() {
   const [state, setState] = useState({
-    address: {
-      street: "",
-      neighbourhood: "",
-      city: "",
-      postCode: "",
-      stateOrProvince: "",
-      country: "",
-    },
+    AddressStreet: "",
+    AddressNum: "",
+    AddressCity: "",
+    AddressPostalCode: "",
+    // stateOrProvince: "",
+    // country: "",
     _id: "",
     name: "",
     email: "",
-    phoneNumber: "",
+    // phoneNumber: "",
   });
 
   // O useEffect é um Hook que executa a sua callback (primeiro parâmetro) toda vez que qualquer coisa na sua array de dependências (segundo parâmetro) sofre qualquer tipo de alteração. Caso a array de dependências esteja vazia, o useEffect roda a callback uma vez assim que o componente renderiza na tela (mesmo efeito do componentDidMount)
@@ -60,27 +58,27 @@ function Profile() {
       <ul>
         <li>
           <strong>Post Code: </strong>
-          {state.address.postCode}
+          {state.AddressPostalCode}
         </li>
         <li>
           <strong>Street: </strong>
-          {state.address.street}
+          {state.AddressStreet}
         </li>
         <li>
-          <strong>Neighbourhood: </strong>
-          {state.address.neighbourhood}
+          <strong>Number: </strong>
+          {state.AddressNum}
         </li>
         <li>
           <strong>City: </strong>
-          {state.address.city}
+          {state.AddressCity}
         </li>
         <li>
           <strong>State or Province: </strong>
-          {state.address.stateOrProvince}
+          {state.AddressState}
         </li>
         <li>
           <strong>Country: </strong>
-          {state.address.country}
+          {state.AddressCountry}
         </li>
       </ul>
     </div>
