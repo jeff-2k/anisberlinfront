@@ -14,7 +14,7 @@ function Navbar() {
   const { loggedInUser, setLoggedInUser } = useContext(AuthContext);
 
   return (
-    <nav className="navbar navbar-expand-lg d-flex justify-content-center ">
+    <nav className="navbar navbar-expand-lg d-flex justify-content-center mx-auto ">
 
 
       <button
@@ -35,10 +35,10 @@ function Navbar() {
       >
 
 
-        <ul className="navbar-nav mx-auto">
+        <ul className="navbar-nav mx-auto" style={{"maxWidth": "2.95%"}}>
           {/* Esconder o link de quem não for Admin */}
           {loggedInUser.user.role === "ADMIN" ? (
-            <li className="nav-item ">
+            <li className="nav-item mx-auto">
               <NavLink
                 className="nav-link"
                 activeClassName="active"
@@ -56,9 +56,9 @@ function Navbar() {
           </li> */}
         </ul>
         
-        <div className="logo d-flex mx-auto">
+        <div className="logo d-flex mx-auto" style={{"left": "50%", "right": "50%"}}>
           <div className="ml-5 mr-3 d-flex justify-content-center mx-auto">
-            <NavLink className="navbar-brand" to="/">
+            <NavLink className="navbar-brand mx-auto" to="/">
             <img src={Logo} alt="logo" />
             </NavLink>
          </div>
@@ -72,7 +72,7 @@ function Navbar() {
               <Dropdown>
                 <Dropdown.Toggle variant="second" id="dropdown-basic">
                   <img
-                    src={`https://ui-avatars.com/api/?name=${loggedInUser.user.name}&size=32&background=random`}
+                    src={`https://ui-avatars.com/api/?name=${loggedInUser.user.name}&size=32&background=f1d190&color=133f2f`}
                     className="rounded-circle"
                     alt="Profile"
                   />
