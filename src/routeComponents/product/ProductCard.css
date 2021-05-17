@@ -1,20 +1,30 @@
+
 .product-img {
-  height: auto;
-  width: 50px;
+  height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 
 .card-fixed-height {
   height: 330px;
-  max-height: 330px;
+  max-height: 200%;
 }
 
 .card-img-container {
-  height: 100px;
-  max-height: 100px;
+  height: 100%;
+  max-height: 200%;
 }
 
 .card-title-fixed-height {
   height: 57px;
-  max-height: 57px;
+  max-height: 200%;
+  font-size: 30px;
+  font-family: 'Abhaya Libre', serif;
+  color:#133f2f
+}
+
+.card-text {
+  font-size: 21px;
+  font-family: 'Abhaya Libre', serif;
+  color: #133f2f
 }
