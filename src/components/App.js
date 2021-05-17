@@ -9,7 +9,7 @@ import AdminRoute from "../routeComponents/auth/AdminRoute";
 import ForgotPassword from "../routeComponents/auth/ForgotPassword";
 import ResetPassword from "../routeComponents/auth/ResetPassword";
 import Navbar from "./Navbar";
-import Footer from "./Footer"
+import Footer from "./Footer";
 
 import ProductFeed from "../routeComponents/product/ProductFeed";
 import ProductDetail from "../routeComponents/product/ProductDetail";
@@ -22,6 +22,7 @@ import OrderSuccess from "../routeComponents/checkout/OrderSuccess";
 
 import { AuthContextComponent } from "../contexts/authContext";
 import { CartContextComponent } from "../contexts/cartContext";
+import BestSellers from "./BestSellers";
 
 function App() {
   return (
@@ -56,8 +57,9 @@ function App() {
               <ProtectedRoute exact path="/checkout" component={Checkout} />
               <Route exact path="/order/success" component={OrderSuccess} />
             </Switch>
+            <Route exact path="/" component={BestSellers} />
           </div>
-        </CartContextComponent>        
+        </CartContextComponent>
       </AuthContextComponent>
       <Footer></Footer>
     </BrowserRouter>
