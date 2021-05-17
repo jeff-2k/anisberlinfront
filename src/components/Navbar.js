@@ -1,6 +1,7 @@
 import './Navbar.css'
 
-import Logo from "./images/logo.png"
+import Logo from "./images/logo_2.png"
+import LogoText from "./images/logo_name.png"
 import { NavLink } from "react-router-dom";
 import { Dropdown } from "react-bootstrap";
 import { useContext } from "react";
@@ -13,7 +14,13 @@ function Navbar() {
   const { loggedInUser, setLoggedInUser } = useContext(AuthContext);
 
   return (
-    <nav className="navbar navbar-expand-lg  ">
+    <nav className="navbar navbar-expand-lg d-flex justify-content-center ">
+
+      <div className="ml-5 mr-3">
+        <NavLink className="navbar-brand" to="/">
+          <img src={Logo} alt="logo" />
+        </NavLink>
+      </div>
 
       <button
         className="navbar-toggler"
@@ -26,10 +33,13 @@ function Navbar() {
       >
         <span className="navbar-toggler-icon"></span>
       </button>
+
       <div
         className="collapse navbar-collapse d-flex justify-content-between"
         id="navbarText"
       >
+
+
         <ul className="navbar-nav mr-auto">
           {/* Esconder o link de quem não for Admin */}
           {loggedInUser.user.role === "ADMIN" ? (
@@ -50,12 +60,6 @@ function Navbar() {
             </NavLink>
           </li>
         </ul>
-
-        <div className="ml-3">
-        <NavLink className="navbar-brand" to="/">
-          <img src={Logo} alt="logo" />
-        </NavLink>
-      </div>
         
         <div className="mr-3">
           {loggedInUser.user.name ? (
@@ -63,7 +67,7 @@ function Navbar() {
               <Cart />
 
               <Dropdown>
-                <Dropdown.Toggle variant="primary" id="dropdown-basic">
+                <Dropdown.Toggle variant="second" id="dropdown-basic">
                   <img
                     src={`https://ui-avatars.com/api/?name=${loggedInUser.user.name}&size=32&background=random`}
                     className="rounded-circle"
@@ -90,7 +94,7 @@ function Navbar() {
             </div>
           ) : (
             <NavLink
-              className="nav-link text-white"
+              className="nav-link"
               activeClassName="active"
               to="/login"
             >
