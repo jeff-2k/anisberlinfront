@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
+import './ProductForm.css'
+
 
 import api from "../../apis/index";
 
@@ -68,7 +70,7 @@ function ProductCreate() {
 
   return (
     <div>
-      <h1>New Product </h1>
+      <h1 className="Create">New Product </h1>
 
       <hr />
 

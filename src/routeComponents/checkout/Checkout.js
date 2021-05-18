@@ -1,9 +1,11 @@
 import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { loadStripe } from "@stripe/stripe-js";
-
 import { CartContext } from "../../contexts/cartContext";
 import { AuthContext } from "../../contexts/authContext";
+
+import background from '../../components/images/backgroundanis/background-signup-01.png'
+
 
 import api from "../../apis/index.js";
 
@@ -68,6 +70,7 @@ function Checkout() {
 
   return (
     <div className="m-5">
+      <img src={background} alt="background" class="bg" />
       <h1 className="mb-2">Order Summary</h1>
       <div className="list-group">
         {state.map((product) => {
