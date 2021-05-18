@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { loadStripe } from "@stripe/stripe-js";
 import { CartContext } from "../../contexts/cartContext";
 import { AuthContext } from "../../contexts/authContext";
+import "./Checkout.css"
 
 import background from '../../components/images/backgroundanis/background-signup-01.png'
 
@@ -104,7 +105,7 @@ function Checkout() {
           );
         })}
 
-        <button className="btn btn-primary btn-lg mt-3" onClick={handleSubmit}>
+        <button className="buttonGreenOrder btn-lg mt-3" onClick={handleSubmit}>
           Confirm Order
         </button>
       </div>

@@ -18,3 +18,11 @@
   font-family: 'Abhaya Libre', serif;
   color:#133f2f
 }
+
+.buttonGreen {
+  border: #f1a42d ;
+    background-color: #133f2f;
+    color: white;
+    width: 80px;
+    height: 35px;
+}

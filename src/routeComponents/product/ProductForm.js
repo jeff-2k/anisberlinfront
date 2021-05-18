@@ -118,7 +118,7 @@ function ProductForm(props) {
 
       </div>
       <hr />
-      <button type="submit" className="btn btn-primary">
+      <button type="submit" className="btn buttonGreen ">
         Submit
       </button>
     </form>
