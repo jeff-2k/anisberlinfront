@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import ProductCard from "./ProductCard";
 import api from "../../apis/index";
+import './ProductFeed.css'
 
 function ProductFeed() {
   const [product, setProducts] = useState([]);

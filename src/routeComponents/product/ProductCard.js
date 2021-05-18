@@ -42,20 +42,16 @@ function ProductCard(props) {
         </div>
 
         <div>
-        <div className="card-body p-0 mt-2" style={{ height: "25%" }}>
+        <div className="card-body p-0 mt-2" style={{ height: "35%" }}>
           <h4
             title={props.product.name}
-            className="card-title card-title-fixed-height text-truncate p-0"
+            className="card-title card-title-fixed-height text-truncate pb-0"
           >
             <small>{props.product.name}</small>
-
-            <div className="card-icon">
-            
-        </div>
           </h4>
           </div>
 
-          <h3 className="card-text" style={{ height: "15%" }}>
+          <h3 className="card-text" style={{ height: "25%" }}>
             {Number(props.product.price).toLocaleString(
               window.navigator.languages[0],
               { style: "currency", currency: "EUR" }
@@ -67,6 +63,7 @@ function ProductCard(props) {
           </div>   
         </div>
       </div>
+      <br></br>
     </Link>
   );
 }

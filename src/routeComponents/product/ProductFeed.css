@@ -1,0 +1,6 @@
+/*--- MOBILE ---*/
+@media (max-width: 600px) {
+   .col-12{
+       height: 570px;
+   }
+  }
