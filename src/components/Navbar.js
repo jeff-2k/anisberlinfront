@@ -1,7 +1,6 @@
 import './Navbar.css'
 
 import Logo from "./images/logo_2.png"
-import LogoText from "./images/logo_name.png"
 import { NavLink } from "react-router-dom";
 import { Dropdown } from "react-bootstrap";
 import { useContext } from "react";

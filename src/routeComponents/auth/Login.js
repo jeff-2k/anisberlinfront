@@ -1,6 +1,8 @@
 import { Link, useHistory } from "react-router-dom";
 import { useState, useContext, useEffect } from "react";
 
+import background from '../../components/images/backgroundanis/background-signup-01.png'
+import './Login.css'
 import api from "../../apis/index";
 import { AuthContext } from "../../contexts/authContext";
 
@@ -43,9 +45,11 @@ function Login() {
   }
 
   return (
+    <div className="login">
+    <img src={background} alt="background" class="bg" />
     <form onSubmit={handleSubmit}>
       <h1>Sign-In to your account</h1>
-      <div className="form-group">
+      <div className="form-group mt-4">
         <label htmlFor="loginFormEmail">Email address</label>
         <input
           type="email"
@@ -68,11 +72,11 @@ function Login() {
         />
       </div>
 
-      <button type="submit" className="btn btn-primary mt-3">
+      <button type="submit" className="btn btn-primary mt-3" style={{"minWidth": "80px"}}>
         Submit
       </button>
 
-      <div className="mt-4">
+      <div className="mt-5">
         <Link to="/signup">Don't have an account? Sign-up here!</Link>
       </div>
 
@@ -80,6 +84,7 @@ function Login() {
         <Link to="/forgot-password">Forgot your password?</Link>
       </div>
     </form>
+    </div>
   );
 }
 

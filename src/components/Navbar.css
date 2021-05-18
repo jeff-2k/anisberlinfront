@@ -54,6 +54,8 @@ nav {
 /*---ELEMENTS---*/
 nav a{
     color: #f1a42d; 
+    font-family: 'Abhaya Libre', serif;
+    font-size: 120%;
 }
 
 nav img {

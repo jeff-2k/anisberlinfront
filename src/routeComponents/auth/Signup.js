@@ -2,6 +2,8 @@ import { Link, useHistory } from "react-router-dom";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
+import './Signup.css'
+import background from '../../components/images/backgroundanis/background-signup-01.png'
 import api from "../../apis/index";
 
 import InputFeedback from "../../components/InputFeedback";
@@ -75,6 +77,7 @@ function Signup() {
   // }
 
   return (
+    
     <Formik
       initialValues={{
         name: "",
@@ -111,9 +114,11 @@ function Signup() {
       }}
     >
       {({ isSubmitting, errors, touched }) => (
+        <div className="signup">
+          <img src={background} alt="background" class="bg" />
         <Form>
-          <h1>Signup </h1>
-          <h2 className="mt-3">Personal Info</h2>
+          <h1>Signup</h1>
+          <h2 className="mt-4">Personal Info</h2>
           <hr />
 
           <div className="form-group">
@@ -225,7 +230,7 @@ function Signup() {
             />
           </div>
 
-          <h2 className="mt-3">Address Info</h2>
+          <h2 className="mt-5">Address Info</h2>
           <hr />
 
           <div className="form-group">
@@ -365,6 +370,7 @@ function Signup() {
             type="submit"
             className="btn btn-primary"
             disabled={isSubmitting}
+            style={{"minWidth": "80px"}}
           >
             {isSubmitting ? (
               <>
@@ -380,10 +386,11 @@ function Signup() {
             )}
           </button>
 
-          <div className="mt-4">
+          <div className="mt-4 mb-4">
             <Link to="/login">Already have an account? Sign-in here!</Link>
           </div>
         </Form>
+        </div>
       )}
     </Formik>
   );
