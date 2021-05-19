@@ -64,7 +64,7 @@ function App() {
           </div>
         </CartContextComponent>
       </AuthContextComponent>
-      <Footer></Footer>
+      <Footer />
     </BrowserRouter>
   );
 }

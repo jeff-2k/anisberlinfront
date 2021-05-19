@@ -1,7 +1,25 @@
+.footerbg h4 {  
+  font-family: 'Abhaya Libre', serif;
+  color:#f1a42d
+}
+.row .container {  
+  margin-left: 0;
+  text-align: center;
+  
+}
+
+.footerbg a:hover{  
+    color: #f1a42d
+}
+
+.footerbg p {  
+  font-family: 'Abhaya Libre', serif;
+  color: #f1a42d ;
+}
 
 .footerbg {
   background-color: #133f2f;
-  padding-top: 100px;
+  padding-top: 5%;
 
 }
 
@@ -12,6 +30,7 @@
     padding-bottom:30px;
     color: white;
     padding-bottom: 20px;
+    text-align: center;
 }
 
 .footerListIN {

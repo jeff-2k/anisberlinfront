@@ -5,67 +5,56 @@ import "./Footer.css"
 
 const Footer = (props) => {
   return (
-    <div className='footerbg '>
-      <div className='row container'>
-        <div className='col-sm footer container '>
-          FALE CONOSCO
-          <div className='footerListOut'>
+    <div className='footerbg mt-5 mx-auto'>
+      <div className='row container mx-auto'>
+        <div className='col-sm footer container mx-auto'>
+          <h4>CUSTOMER SERVICE</h4>
+          <div className='footerListOut mb-1'>
+          <div>
+            <a href="/" className='footerListIN'>Contact Us</a>
           </div>
           <div>
-            <a href="/" className='footerListIN' >Acompanhe seu pedido</a>
+            <a href="/" className='footerListIN'>Order Status</a>
           </div>
           <div>
-            <a href="/" className='footerListIN'>Trocas e devoluções</a>
+            <a href="/" className='footerListIN'>Shipping</a>
           </div>
           <div>
-            <a href="/" className='footerListIN'>Televendas: (11) 1234-5678</a>
+            <a href="/" className='footerListIN'>Delivery Information</a>
           </div>
           <div>
-            <a href="/" className='footerListIN'>WhatsApp: (11) 1234-5678</a>
+            <a href="/" className='footerListIN'>Common Questions</a>
           </div>
-          <div>
-            <a href="/" className='footerListIN'>Enviar e-mail</a>
           </div>
         </div>
         <div className='col-sm footer'>
-          AJUDA E SUPORTE
+          <h4>ABOUT US</h4>
           <div>
-            <div className='footerListOut'>
+            <div className='footerListOut mb-1'>
             </div>
             <div>
-              <a href="/" className='footerListIN'>Política de troca</a>
+              <a href="/" className='footerListIN'>Store & Events</a>
             </div>
             <div>
-              <a href="/" className='footerListIN'>Política de privacidade</a>
+              <a href="/" className='footerListIN'>Get Email Updates</a>
             </div>
             <div>
-              <a href="/" className='footerListIN'>Perguntas frequentes</a>
+              <a href="/" className='footerListIN'>Exchange Policy</a>
             </div>
             <div>
-              <a href="/" className='footerListIN'>Termos e condições</a>
+              <a href="/" className='footerListIN'>Privacy Policy</a>
             </div>
             <div>
-              <a href="/" className='footerListIN'>Fornecedores</a>
+              <a href="/" className='footerListIN'>Terms & Conditions</a>
             </div>
           </div>
         </div>
         <div className='col-sm footer'>
-          AJUDA E SUPORTE
-          <div className='footerListOut'>
-          </div>
-          <div>
-            <a href="/" className='footerListIN' >Quem somos</a>
-          </div>
-          <div>
-            <a href="/" className='footerListIN'>Junte-se a nós</a>
-          </div>
-          <div>
-            <a href="/" className='footerListIN'>SIGA-NOS</a>
-          </div>
+       
         </div>
+        <p className="mt-2 d-flex align-items-end">Copyright © 2021 Anis  /  All rights reserved.</p>
       </div>
     </div>
-
   )
 }
 

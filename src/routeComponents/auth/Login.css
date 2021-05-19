@@ -37,6 +37,9 @@
     background-color: #133f2f;
 }
 
+.login .btn:hover{  
+  color: #f1a42d
+}
 
 
 /*--- BACKGROUND ---*/

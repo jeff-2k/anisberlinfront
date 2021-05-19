@@ -42,3 +42,8 @@ border-top: 1px solid #f1a42d;
     width: 80px;
     height: 35px;
 }
+
+.form .btn:hover{  
+  color: #f1a42d ;
+  background-color: #133f2f;
+}
