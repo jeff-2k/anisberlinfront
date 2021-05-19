@@ -58,12 +58,13 @@ function App() {
               />
               <ProtectedRoute exact path="/checkout" component={Checkout} />
               <Route exact path="/order/success" component={OrderSuccess} />
-            </Switch>
+            </Switch>{" "}
             <Route exact path="/" component={BestSellers} />
+            <div></div>
           </div>
         </CartContextComponent>
       </AuthContextComponent>
-      {/* <Footer></Footer> */}
+      <Footer></Footer>
     </BrowserRouter>
   );
 }
