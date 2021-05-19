@@ -33,6 +33,7 @@ function App() {
           <Navbar />
           <Route exact path="/" component={VideoHome} />
           <div className="container mt-5">
+          <Route exact path="/" component={BestSellers} />
             <Switch>
               <Route exact path="/" component={ProductFeed} />
               <Route exact path="/signup" component={Signup} />
@@ -58,9 +59,7 @@ function App() {
               />
               <ProtectedRoute exact path="/checkout" component={Checkout} />
               <Route exact path="/order/success" component={OrderSuccess} />
-            </Switch>{" "}
-            <Route exact path="/" component={BestSellers} />
-            <div></div>
+            </Switch>
           </div>
         </CartContextComponent>
       </AuthContextComponent>
