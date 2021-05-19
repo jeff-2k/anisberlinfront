@@ -116,7 +116,7 @@ function ProductDetails() {
           className="btn btn-primary"
           onClick={() => {
             console.log(cart);
-            if (quantity > 0) { setCart([...cart, { qtt: quantity, productId: id }]) };
+            if (quantity > 0 ) { setCart([...cart, { qtt: quantity, productId: id }]) };
           }}
         >
           Add to Cart

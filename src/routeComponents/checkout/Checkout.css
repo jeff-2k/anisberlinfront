@@ -4,6 +4,34 @@
       position: relative;
       right: 22%;
   }   
+  .info {
+    text-align: end;
+  }
+
+  .info h5{
+    margin-top: 0px;
+    font-size: 30px;
+    font-family: 'Abhaya Libre', serif;
+    color:#133f2f
+  }
+
+  .Order .info h5{
+    font-size: 30px;
+    font-family: 'Abhaya Libre', serif;
+    color:#133f2f
+  }
+
+  .info h5{
+    margin-top:0px;
+    font-size: 30px;
+    font-family: 'Abhaya Libre', serif;
+    color:#133f2f
+  }
+
+  .info h3{
+    font-family: 'Abhaya Libre', serif;
+    color:#133f2f
+  }
 }
 
 .buttonGreenOrder {
@@ -13,12 +41,39 @@
   
 }
 
-
-.checkoutFont{
+.Order h5{
+  font-size: 30px;
+  font-family: 'Abhaya Libre', serif;
+  color:#133f2f
 }
+
+.Order .name {
+  font-size: 30px;
+  font-family: 'Abhaya Libre', serif;
+  color:#133f2f
+}
+
+.info {
+  text-align: center;
+}
+
+.info small {
+  font-size: 22px;
+  font-family: 'Abhaya Libre', serif;
+  color:#133f2f
+}
+
+
+
 .Order h1{
   font-weight: bold;
   font-size: 45px;
+  font-family: 'Abhaya Libre', serif;
+  color:#133f2f
+}
+
+.info h3{
+  font-size: 28px ;
   font-family: 'Abhaya Libre', serif;
   color:#133f2f
 }
