@@ -37,7 +37,8 @@ function ProductCard(props) {
           />
         </div>
 
-        <div className="card-body">
+        <div>
+        <div className="card-body p-0 mt-2" style={{ minHeight: "25%", maxHeight: "25%" }}>
           <h4
             title={props.product.name}
             className="card-title card-title-fixed-height text-truncate"
@@ -73,6 +74,7 @@ function ProductCard(props) {
             </small> */}
           </p>
         </div>
+      </div>
       </div>
     </Link>
   );

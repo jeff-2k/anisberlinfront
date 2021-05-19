@@ -10,6 +10,12 @@ import ForgotPassword from "../routeComponents/auth/ForgotPassword";
 import ResetPassword from "../routeComponents/auth/ResetPassword";
 import Navbar from "./Navbar";
 
+// import Video from './video/header--anis.mp4';
+
+// <video className='videoTag' autoPlay loop muted>
+//     <source src={Video} type='video/mp4' />
+// </video>
+
 import ProductFeed from "../routeComponents/product/ProductFeed";
 import ProductDetail from "../routeComponents/product/ProductDetail";
 import ProductCreate from "../routeComponents/product/ProductCreate";
