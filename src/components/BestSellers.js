@@ -21,34 +21,25 @@ function BestSellers() {
   }, []);
 
   return (
-    <div
-      className="div-best row col-12 col-sm-4 col-md-4 m-0"
-      id="bestseller"
-      style={{ minWidth: "100%", marginTop: "-20%" }}
-    >
-      <div />
-      <div>
-        <h1 className="bt-title mt-5" style={{ left: "50%" }}>
-          Best Sellers
-        </h1>
-      </div>
-      <div className="row">
-        {product
-          .map((product) => {
-            return (
-              <div
-                key={product._id}
-                className="card card-fixed-height text-dark shadow rounded border-0 m-1 text-center my-5"
-                style={{ width: "25%", height: "40%" }}
-              >
-                <div>
-                  <ProductCard product={product} />
-                </div>
+    <div className="row" id="bestsellers">
+      {product
+        .map((product) => {
+          return (
+            <div
+              key={product._id}
+              className="col-12 col-sm-4 col-md-4 mx-auto"
+              style={{ "margin-bottom": "-18%" }}
+            >
+              <div>
+                <h1>Best Sellers</h1>
               </div>
-            );
-          })
-          .filter((product, i) => i > 1 && i < 5)}
-      </div>
+              <div>
+                <ProductCard product={product} />
+              </div>
+            </div>
+          );
+        })
+        .filter((product, i) => i < 3)}
     </div>
   );
 }

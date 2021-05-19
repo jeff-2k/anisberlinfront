@@ -19,7 +19,7 @@ import ProductDelete from "../routeComponents/product/ProductDelete";
 
 import Checkout from "../routeComponents/checkout/Checkout";
 import OrderSuccess from "../routeComponents/checkout/OrderSuccess";
-import VideoHome from "./VideoHome";
+import VideoHome from './VideoHome'
 
 import { AuthContextComponent } from "../contexts/authContext";
 import { CartContextComponent } from "../contexts/cartContext";
@@ -60,11 +60,10 @@ function App() {
               <Route exact path="/order/success" component={OrderSuccess} />
             </Switch>{" "}
             <Route exact path="/" component={BestSellers} />
-            <div></div>
           </div>
         </CartContextComponent>
       </AuthContextComponent>
-      <Footer></Footer>
+      <Footer />
     </BrowserRouter>
   );
 }

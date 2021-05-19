@@ -1,5 +1,4 @@
 import "./Navbar.css";
-import { Route } from "react-router-dom";
 
 import Logo from "./images/logo_2.png";
 import { NavLink } from "react-router-dom";
@@ -16,22 +15,17 @@ function Navbar() {
 
   return (
     <nav className="navbar navbar-expand-lg d-flex justify-content-center mx-auto ">
-      <Route exact path="/">
-        <Link
-          href=""
-          className="nav-link"
-          activeClass="active"
-          to="bestseller"
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-        >
-          Best
-          <br />
-          Sellers
-        </Link>
-      </Route>
+      <Link
+        className="nav-link"
+        activeClass="active"
+        to="bestsellers"
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={500}
+      >
+        Best Sellers
+      </Link>
 
       <button
         className="navbar-toggler"
