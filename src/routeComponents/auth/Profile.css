@@ -1,4 +1,7 @@
-/*--- LOGIN STYLE ---*/
+.profile hr{
+  border-top: 1px solid #f1a42d;
+}
+
 .Big {
   font-weight: bold;
   font-size: 45px;

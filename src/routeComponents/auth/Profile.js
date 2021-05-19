@@ -37,7 +37,7 @@ function Profile() {
   }, []);
 
   return (
-    <div>
+    <div className="profile">
        <img src={background} alt="background" class="bg" />
       <h2 className="Big">Personal Info</h2>
       <hr />

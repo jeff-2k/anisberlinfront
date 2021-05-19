@@ -72,7 +72,7 @@ function Login() {
         />
       </div>
 
-      <button type="submit" className="btn btn-primary mt-3" style={{"minWidth": "80px"}}>
+      <button type="submit" className="btn buttonGreen mt-3" style={{"minWidth": "80px"}}>
         Submit
       </button>
 

@@ -3,6 +3,7 @@ import './ProductForm.css'
 
 function ProductForm(props) {
   return (
+    <div className="form">
     <form className="mb-5" onSubmit={props.handleSubmit}>
       <img src={background} alt="background" class="bg" />
       <div className="form-group">
@@ -30,8 +31,8 @@ function ProductForm(props) {
 
 
 
-      <div className="form-row">
-        <div className="form-group">
+      <div className="form-row m-auto">
+        <div className="form-group mr-1">
           <label htmlFor="productGlutenFree" className="form">Glúten Free?</label>
           <input
             type="text"
@@ -43,7 +44,7 @@ function ProductForm(props) {
           />
         </div>
 
-        <div className="form-group">
+        <div className="form-group mr-1">
           <label htmlFor="productFormLactoseFree" className="form">Lactose Free?</label>
           <input
             type="text"
@@ -55,7 +56,7 @@ function ProductForm(props) {
           />
         </div>
 
-        <div className="form-group">
+        <div className="form-group mr-1">
           <label htmlFor="productFormSugarFree" className="form">Sugar Free?</label>
           <input
             type="text"
@@ -67,7 +68,7 @@ function ProductForm(props) {
           />
         </div>
 
-        <div className="form-group">
+        <div className="form-group mr-2">
           <label htmlFor="productFormCaseinFree" className="form">Casein Free?</label>
           <input
             type="text"
@@ -79,7 +80,7 @@ function ProductForm(props) {
           />
         </div>
 
-        <div className="form-group">
+        <div className="form-group mr-2">
           <label htmlFor="productFormVegan" className="form">Vegan?</label>
           <input
             type="text"
@@ -118,10 +119,11 @@ function ProductForm(props) {
 
       </div>
       <hr />
-      <button type="submit" className="btn buttonGreen ">
+      <button type="submit" className="btn buttonGreen" style={{"minWidth": "80px"}}>
         Submit
       </button>
     </form>
+    </div>
   );
 }
 
