@@ -1,4 +1,20 @@
-/*--- LOGIN STYLE ---*/
+/*--- MOBILE ---*/
+@media (max-width: 600px) {
+  .buttonGreen {
+      position: relative;
+      right: 11%;
+  }   
+}
+
+
+/*--- TABLET & DESKTOP ---*/
+.form form video {
+  visibility: hidden;
+}
+
+hr {
+border-top: 1px solid #f1a42d;
+}
 .form{
   font-weight: bold;
   font-size: 20px;

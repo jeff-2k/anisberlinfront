@@ -70,7 +70,7 @@ function Checkout() {
   }
 
   return (
-    <div className="m-5">
+    <div className="m-5 Order">
       <img src={background} alt="background" class="bg" />
       <h1 className="mb-2">Order Summary</h1>
       <div className="list-group">
@@ -105,7 +105,7 @@ function Checkout() {
           );
         })}
 
-        <button className="buttonGreenOrder btn-lg mt-3" onClick={handleSubmit}>
+        <button className="buttonGreenOrder btn-lg mt-3" onClick={handleSubmit} style={{"minWidth": "120px"}}>
           Confirm Order
         </button>
       </div>

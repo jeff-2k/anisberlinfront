@@ -1,5 +1,20 @@
+/*--- MOBILE ---*/
+@media (max-width: 600px) {
+  .buttonGreenOrder {
+      position: relative;
+      right: 22%;
+  }   
+}
+
 .buttonGreenOrder {
   border: #f1a42d;
   background-color: #133f2f;
   color: white;
+}
+
+.Order h1{
+  font-weight: bold;
+  font-size: 45px;
+  font-family: 'Abhaya Libre', serif;
+  color:#133f2f
 }
