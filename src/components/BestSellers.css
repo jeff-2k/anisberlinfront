@@ -4,3 +4,26 @@
     max-height: 550px;
   }
 }
+
+.bt-title {
+  color: #f1a42d;
+}
+
+.card-best {
+  width: 50px;
+  height: auto;
+  padding-bottom: 15px;
+}
+
+.div-best {
+  background-color: #133f2f;
+  position: relative;
+  top: -6px;
+}
+.card-text {
+  color: #f1a42d;
+}
+
+.card-body .card-title small {
+  color: #f1a42d;
+}
