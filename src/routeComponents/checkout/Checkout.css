@@ -3,3 +3,11 @@
   background-color: #133f2f;
   color: white;
 }
+
+
+.checkoutFont{
+  font-weight: bold;
+  font-size: 45px;
+  font-family: 'Abhaya Libre', serif;
+  color:#133f2f
+}

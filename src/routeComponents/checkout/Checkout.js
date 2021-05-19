@@ -72,7 +72,7 @@ function Checkout() {
   return (
     <div className="m-5">
       <img src={background} alt="background" class="bg" />
-      <h1 className="mb-2">Order Summary</h1>
+      <h1 className="mb-2 checkoutFont">Order Summary</h1>
       <div className="list-group">
         {state.map((product) => {
           return (
