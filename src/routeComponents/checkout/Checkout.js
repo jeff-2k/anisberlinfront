@@ -11,7 +11,7 @@ import background from '../../components/images/backgroundanis/background-signup
 import api from "../../apis/index.js";
 
 const stripePromise = loadStripe(
-  "pk_test_51IpY5SBtp8twNsKT2ZuHjMRH7Ne40Nkynv7VNRnQINOnkj3N0id7sLRczvclo3krC056AfwOAOLPXuqti5vJL3JI00G0GBEzB7"
+  "pk_test_51IstEYLZPuQrlsd14oIqnHqtHriq6gtgD3fxTXCDeSGx3C7e2auwW70YtIzfz2KhBLdyLsUNjGsfp1APj5pLssOO00aqN7I1xn"
 );
 
 function Checkout() {
