@@ -90,8 +90,8 @@ function Checkout() {
                   />
                 </div>
 
-                <div className="col-8">
-                  <h5 className="mb-1">{product.name}</h5>
+                <div className="info col-8">
+                  <h5 className="price mb-1">{product.name}</h5>
                   <h3>
                     {product.price.toLocaleString(
                       window.navigator.languages[0],
