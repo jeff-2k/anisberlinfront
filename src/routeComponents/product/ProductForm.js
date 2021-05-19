@@ -1,12 +1,8 @@
-import background from '../../components/images/backgroundanis/background-signup-01.png'
-import './ProductForm.css'
-
 function ProductForm(props) {
   return (
     <form className="mb-5" onSubmit={props.handleSubmit}>
-      <img src={background} alt="background" class="bg" />
       <div className="form-group">
-        <label htmlFor="productFormName" className="form">Product Name</label>
+        <label htmlFor="productFormName">Product Name</label>
         <input
           type="text"
           className="form-control"
@@ -17,7 +13,7 @@ function ProductForm(props) {
         />
       </div>
       <div className="form-group">
-        <label htmlFor="productFormDescription" className="form">Description</label>
+        <label htmlFor="productFormDescription">Description</label>
         <input
           type="text"
           className="form-control"
@@ -32,7 +28,7 @@ function ProductForm(props) {
 
       <div className="form-row">
         <div className="form-group">
-          <label htmlFor="productGlutenFree" className="form">Glúten Free?</label>
+          <label htmlFor="productGlutenFree">Glúten Free?</label>
           <input
             type="text"
             className="form-control"
@@ -44,7 +40,7 @@ function ProductForm(props) {
         </div>
 
         <div className="form-group">
-          <label htmlFor="productFormLactoseFree" className="form">Lactose Free?</label>
+          <label htmlFor="productFormLactoseFree">Lactose Free?</label>
           <input
             type="text"
             className="form-control"
@@ -56,7 +52,7 @@ function ProductForm(props) {
         </div>
 
         <div className="form-group">
-          <label htmlFor="productFormSugarFree" className="form">Sugar Free?</label>
+          <label htmlFor="productFormSugarFree">Sugar Free?</label>
           <input
             type="text"
             className="form-control"
@@ -68,7 +64,7 @@ function ProductForm(props) {
         </div>
 
         <div className="form-group">
-          <label htmlFor="productFormCaseinFree" className="form">Casein Free?</label>
+          <label htmlFor="productFormCaseinFree">Casein Free?</label>
           <input
             type="text"
             className="form-control"
@@ -80,7 +76,7 @@ function ProductForm(props) {
         </div>
 
         <div className="form-group">
-          <label htmlFor="productFormVegan" className="form">Vegan?</label>
+          <label htmlFor="productFormVegan">Vegan?</label>
           <input
             type="text"
             className="form-control"
@@ -94,7 +90,7 @@ function ProductForm(props) {
       </div>
       <div className="form-row">
         <div className="form-group col">
-          <label htmlFor="productFormPrice" className="form">Price</label>
+          <label htmlFor="productFormPrice">Price</label>
           <input
             type="text"
             className="form-control"
@@ -106,10 +102,10 @@ function ProductForm(props) {
         </div>
 
         <div className="form-group">
-          <label htmlFor="productFormImage" className="form">Imagem</label>
+          <label htmlFor="productFormImage">Imagem</label>
           <input
             type="file"
-            className="form-control boxBorder"
+            className="form-control"
             id="productFormImage"
             name="image_url"
             onChange={props.handleChange}
@@ -118,7 +114,7 @@ function ProductForm(props) {
 
       </div>
       <hr />
-      <button type="submit" className="btn buttonGreen ">
+      <button type="submit" className="btn btn-primary">
         Submit
       </button>
     </form>
