@@ -1,17 +1,18 @@
 import { useState, useEffect } from "react";
+import background from '../../components/images/backgroundanis/background-signup-01.png'
+import './Profile.css'
+
 
 import api from "../../apis/index";
 
 function Profile() {
   const [state, setState] = useState({
-    address: {
-      street: "",
-      neighbourhood: "",
-      city: "",
-      postCode: "",
-      stateOrProvince: "",
-      country: "",
-    },
+    AddressStreet: "",
+    AddressNum: "",
+    AddressCity: "",
+    AddressPostalCode: "",
+    AddressState: "",
+    AddressCountry: "",
     _id: "",
     name: "",
     email: "",
@@ -37,50 +38,55 @@ function Profile() {
 
   return (
     <div>
-      <h2>Personal Info</h2>
+       <img src={background} alt="background" class="bg" />
+      <h2 className="Big">Personal Info</h2>
       <hr />
       <ul>
         <li>
-          <strong>Name: </strong>
+          <strong className="minor">Name: </strong>
           {state.name}
         </li>
         <li>
-          <strong>E-mail: </strong>
+          <strong className="minor">E-mail: </strong>
           {state.email}
         </li>
         <li>
-          <strong>Phone Number: </strong>
+          <strong className="minor">Phone Number: </strong>
           {state.phoneNumber}
         </li>
       </ul>
 
-      <h2>Address Info</h2>
+      <h2 className="Big">Address Info</h2>
       <hr />
 
       <ul>
         <li>
-          <strong>Post Code: </strong>
-          {state.address.postCode}
+          <strong className="minor">Post Code: </strong>
+          {state.AddressPostalCode}
         </li>
         <li>
-          <strong>Street: </strong>
-          {state.address.street}
+          <strong className="minor">Street: </strong>
+          {state.AddressStreet}
         </li>
         <li>
-          <strong>Neighbourhood: </strong>
-          {state.address.neighbourhood}
+          <strong className="minor">Number: </strong>
+          {state.AddressNum}
         </li>
         <li>
-          <strong>City: </strong>
-          {state.address.city}
+          <strong className="minor">City: </strong>
+          {state.AddressCity}
         </li>
         <li>
-          <strong>State or Province: </strong>
-          {state.address.stateOrProvince}
+          <strong className="minor">Neighbourhood: </strong>
+          {state.neighbourhood}
         </li>
         <li>
-          <strong>Country: </strong>
-          {state.address.country}
+          <strong className="minor">State or Province: </strong>
+          {state.AddressState}
+        </li>
+        <li>
+          <strong className="minor">Country: </strong>
+          {state.AddressCountry}
         </li>
       </ul>
     </div>

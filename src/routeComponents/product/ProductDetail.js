@@ -46,7 +46,7 @@ function ProductDetails() {
     <div>
       {loggedInUser.user.role === "ADMIN" ? (
         <div className="row d-flex justify-content-end">
-          <Link to={`/product/edit/${id}`} className="btn btn-warning mr-3">
+          <Link to={`/products/edit/${id}`} className="btn btn-warning mr-3">
             Edit
           </Link>
           {/* Abrimos um modal de confirmação antes de deletar o produto */}
@@ -109,7 +109,7 @@ function ProductDetails() {
           className="btn btn-primary btn-lg"
           onClick={() => {
             console.log(cart);
-            setCart([...cart, { qtt: quantity, productId: id }]);
+            if (quantity > 0) { setCart([...cart, { qtt: quantity, productId: id }])};
           }}
         >
           Add to Cart
@@ -119,7 +119,7 @@ function ProductDetails() {
       <ConfirmationModal
         show={showModal}
         handleClose={() => setShowModal(false)}
-        handleConfirm={() => history.push(`/product/delete/${id}`)}
+        handleConfirm={() => history.push(`/products/delete/${id}`)}
         title="Are you sure you want to delete this product?"
       >
         <p>This action is irreversible. To confirm, click "Confirm".</p>

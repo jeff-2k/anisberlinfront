@@ -1,6 +1,8 @@
 import { useState } from "react";
 
+import './ForgotPassword.css'
 import api from "../../apis/index";
+import background from '../../components/images/backgroundanis/background-signup-01.png'
 
 function ForgotPassword() {
   const [email, setEmail] = useState("");
@@ -28,12 +30,14 @@ function ForgotPassword() {
   }
 
   return (
+  <div className="forgot">
+  <img src={background} alt="background" class="bg" />
     <form onSubmit={handleSubmit}>
       <h1>Forgot your password?</h1>
 
       <small>Type your e-mail below to receive an password reset link.</small>
 
-      <div className="form-group">
+      <div className="form-group mt-4">
         <label htmlFor="forgotPasswordEmail">E-mail</label>
         <input
           id="forgotPasswordEmail"
@@ -43,7 +47,7 @@ function ForgotPassword() {
         />
       </div>
 
-      <button type="submit" className="btn btn-primary">
+      <button type="submit" className="btn btn-primary" style={{"minWidth": "100px"}}>
         Reset Password
       </button>
 
@@ -56,6 +60,7 @@ function ForgotPassword() {
         </div>
       ) : null}
     </form>
+    </div>
   );
 }
 

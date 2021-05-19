@@ -2,7 +2,7 @@ import axios from "axios";
 
 const apis = {
   development: "http://localhost:4000",
-  production: "https://ironbeers-store.herokuapp.com",
+  production: "",
 };
 
 const api = axios.create({

@@ -1,9 +1,12 @@
 import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { loadStripe } from "@stripe/stripe-js";
-
 import { CartContext } from "../../contexts/cartContext";
 import { AuthContext } from "../../contexts/authContext";
+import "./Checkout.css"
+
+import background from '../../components/images/backgroundanis/background-signup-01.png'
+
 
 import api from "../../apis/index.js";
 
@@ -22,7 +25,7 @@ function Checkout() {
       const tempState = [];
 
       for (let productInCart of cart) {
-        const response = await api.get(`/product/${productInCart.productId}`);
+        const response = await api.get(`/products/${productInCart.productId}`);
 
         const { _id, image_url, price, name } = response.data;
 
@@ -68,6 +71,7 @@ function Checkout() {
 
   return (
     <div className="m-5">
+      <img src={background} alt="background" class="bg" />
       <h1 className="mb-2">Order Summary</h1>
       <div className="list-group">
         {state.map((product) => {
@@ -101,7 +105,7 @@ function Checkout() {
           );
         })}
 
-        <button className="btn btn-primary btn-lg mt-3" onClick={handleSubmit}>
+        <button className="buttonGreenOrder btn-lg mt-3" onClick={handleSubmit}>
           Confirm Order
         </button>
       </div>

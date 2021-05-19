@@ -9,6 +9,7 @@ import AdminRoute from "../routeComponents/auth/AdminRoute";
 import ForgotPassword from "../routeComponents/auth/ForgotPassword";
 import ResetPassword from "../routeComponents/auth/ResetPassword";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 // import Video from './video/header--anis.mp4';
 
@@ -27,6 +28,7 @@ import OrderSuccess from "../routeComponents/checkout/OrderSuccess";
 
 import { AuthContextComponent } from "../contexts/authContext";
 import { CartContextComponent } from "../contexts/cartContext";
+import BestSellers from "./BestSellers";
 
 function App() {
   return (
@@ -34,7 +36,6 @@ function App() {
       <AuthContextComponent>
         <CartContextComponent>
           <Navbar />
-
           <div className="container mt-5">
             <Switch>
               <Route exact path="/" component={ProductFeed} />
@@ -62,9 +63,11 @@ function App() {
               <ProtectedRoute exact path="/checkout" component={Checkout} />
               <Route exact path="/order/success" component={OrderSuccess} />
             </Switch>
+            <Route exact path="/" component={BestSellers} />
           </div>
         </CartContextComponent>
       </AuthContextComponent>
+      {/* <Footer></Footer> */}
     </BrowserRouter>
   );
 }

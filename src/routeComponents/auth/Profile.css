@@ -1,0 +1,76 @@
+/*--- LOGIN STYLE ---*/
+.Big {
+  font-weight: bold;
+  font-size: 45px;
+  font-family: 'Abhaya Libre', serif;
+  color:#133f2f
+}
+
+.minor{
+  font-size: 23px;
+  font-family: 'Abhaya Libre', serif;
+  color:#133f2f
+}
+
+.login input {
+  border: 1px solid #f1a42d ;
+  box-shadow: 5px 5px 5px #f1a42d ;
+}
+
+.login a {
+  font-size: 20px;
+  font-family: 'Abhaya Libre', serif;
+  color: #d4406a
+}
+
+.login button {
+  border: #f1a42d ;
+  background-color: #133f2f;
+}
+
+/*--- BACKGROUND ---*/
+img.bg {
+/* Set rules to fill background */
+min-height: 100%;
+min-width: 1024px;
+
+/* Set up proportionate scaling */
+width: 100%;
+height: auto;
+
+/* Set up positioning */
+position: fixed;
+top: 0;
+left: 0;
+z-index: -1;
+}
+
+
+div.admin-bg {
+/* Set rules to fill background */
+min-height: 100%;
+min-width: 1024px;
+
+/* Set up proportionate scaling */
+width: 100%;
+height: auto;
+
+/* Set up positioning */
+position: fixed;
+top: 0;
+left: 0;
+z-index: -1;
+background-color: #f1d190;
+}
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+img.bg {
+  left: 50%;
+  margin-left: -512px;   /* 50% */
+}
+
+div.admin-bg {
+  left: 50%;
+  margin-left: -512px;   /* 50% */
+}
+}

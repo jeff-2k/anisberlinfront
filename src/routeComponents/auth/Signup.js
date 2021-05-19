@@ -2,6 +2,8 @@ import { Link, useHistory } from "react-router-dom";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
+import './Signup.css'
+import background from '../../components/images/backgroundanis/background-signup-01.png'
 import api from "../../apis/index";
 
 import InputFeedback from "../../components/InputFeedback";
@@ -21,12 +23,12 @@ const SignupSchema = Yup.object().shape({
     /(\(?\d{2}\)?\s)?(\d{4,5}\-\d{4})/,
     "Invalid phone number"
   ),
-  street: Yup.string().required("Required field"),
+  AddressStreet: Yup.string().required("Required field"),
   neighbourhood: Yup.string().required("Required Field"),
-  city: Yup.string().required("Required Field"),
-  postCode: Yup.string().max(9, "Invalid post code").required("Required Field"),
-  stateOrProvince: Yup.string().required("Required Field"),
-  country: Yup.string().required("Required Field"),
+  AddressCity: Yup.string().required("Required Field"),
+  AddressPostalCode: Yup.string().max(9, "Invalid post code").required("Required Field"),
+  AddressState: Yup.string().required("Required Field"),
+  AddressCountry: Yup.string().required("Required Field"),
 });
 
 function Signup() {
@@ -75,43 +77,29 @@ function Signup() {
   // }
 
   return (
+    
     <Formik
       initialValues={{
         name: "",
         email: "",
         password: "",
+        AddressCountry: "",
+        AddressState: "",
+        AddressPostalCode: "",
+        AddressCity: "",
+        AddressNum: "",
+        AddressStreet: "",
         phoneNumber: "",
-        street: "",
         neighbourhood: "",
-        city: "",
-        postCode: "",
-        stateOrProvince: "",
-        country: "",
       }}
       validationSchema={SignupSchema}
       onSubmit={async (values, { setSubmitting }) => {
         setSubmitting(true);
 
-        const {
-          street,
-          neighbourhood,
-          city,
-          postCode,
-          stateOrProvince,
-          country,
-        } = values;
 
         try {
           const response = await api.post("/signup", {
-            ...values,
-            address: {
-              street,
-              neighbourhood,
-              city,
-              postCode,
-              stateOrProvince,
-              country,
-            },
+            ...values,             
           });
 
           console.log(response);
@@ -126,9 +114,11 @@ function Signup() {
       }}
     >
       {({ isSubmitting, errors, touched }) => (
+        <div className="signup">
+          <img src={background} alt="background" class="bg" />
         <Form>
-          <h1>Signup </h1>
-          <h2 className="mt-3">Personal Info</h2>
+          <h1>Signup</h1>
+          <h2 className="mt-4">Personal Info</h2>
           <hr />
 
           <div className="form-group">
@@ -197,6 +187,26 @@ function Signup() {
           </div>
 
           <div className="form-group">
+            <label htmlFor="signupFormName">House Number</label>
+            <Field
+              type="text"
+              className={`form-control ${
+                errors.AddressNum && touched.AddressNum ? "is-invalid" : "is-valid"
+              }`}
+              id="signupFormName"
+              name="AddressNum"
+            />
+            <ErrorMessage
+              name="AddressNum"
+              render={(msg) => (
+                <InputFeedback invalid={errors.AddressNum && touched.AddressNum}>
+                  {msg}
+                </InputFeedback>
+              )}
+            />
+          </div>
+
+          <div className="form-group">
             <label htmlFor="signupFormPhoneNumber">Phone Number</label>
             <Field
               type="text"
@@ -220,7 +230,7 @@ function Signup() {
             />
           </div>
 
-          <h2 className="mt-3">Address Info</h2>
+          <h2 className="mt-5">Address Info</h2>
           <hr />
 
           <div className="form-group">
@@ -228,15 +238,15 @@ function Signup() {
             <Field
               type="text"
               className={`form-control ${
-                errors.postCode && touched.postCode ? "is-invalid" : "is-valid"
+                errors.AddressPostalCode && touched.AddressPostalCode ? "is-invalid" : "is-valid"
               }`}
               id="signupFormPostCode"
-              name="postCode"
+              name="AddressPostalCode"
             />
             <ErrorMessage
-              name="postCode"
+              name="AddressPostalCode"
               render={(msg) => (
-                <InputFeedback invalid={errors.postCode && touched.postCode}>
+                <InputFeedback invalid={errors.AddressPostalCode && touched.AddressPostalCode}>
                   {msg}
                 </InputFeedback>
               )}
@@ -248,15 +258,15 @@ function Signup() {
             <Field
               type="text"
               className={`form-control ${
-                errors.street && touched.street ? "is-invalid" : "is-valid"
+                errors.AddressStreet && touched.AddressStreet ? "is-invalid" : "is-valid"
               }`}
               id="signupFormStreet"
-              name="street"
+              name="AddressStreet"
             />
             <ErrorMessage
-              name="street"
+              name="AddressStreet"
               render={(msg) => (
-                <InputFeedback invalid={errors.street && touched.street}>
+                <InputFeedback invalid={errors.AddressStreet && touched.AddressStreet}>
                   {msg}
                 </InputFeedback>
               )}
@@ -292,15 +302,15 @@ function Signup() {
             <Field
               type="text"
               className={`form-control ${
-                errors.city && touched.city ? "is-invalid" : "is-valid"
+                errors.AddressCity && touched.AddressCity ? "is-invalid" : "is-valid"
               }`}
               id="signupFormCity"
-              name="city"
+              name="AddressCity"
             />
             <ErrorMessage
-              name="city"
+              name="AddressCity"
               render={(msg) => (
-                <InputFeedback invalid={errors.city && touched.city}>
+                <InputFeedback invalid={errors.AddressCity && touched.AddressCity}>
                   {msg}
                 </InputFeedback>
               )}
@@ -312,18 +322,18 @@ function Signup() {
             <Field
               type="text"
               className={`form-control ${
-                errors.stateOrProvince && touched.stateOrProvince
+                errors.AddressState && touched.AddressState
                   ? "is-invalid"
                   : "is-valid"
               }`}
               id="signupFormState"
-              name="stateOrProvince"
+              name="AddressState"
             />
             <ErrorMessage
-              name="stateOrProvince"
+              name="AddressState"
               render={(msg) => (
                 <InputFeedback
-                  invalid={errors.stateOrProvince && touched.stateOrProvince}
+                  invalid={errors.AddressState && touched.AddressState}
                 >
                   {msg}
                 </InputFeedback>
@@ -336,19 +346,19 @@ function Signup() {
             <Field
               type="text"
               className={`form-control ${
-                errors.country && touched.country
+                errors.AddressCountry && touched.AddressCountry
                   ? "is-invalid"
-                  : !errors.country && touched.country
+                  : !errors.AddressCountry && touched.AddressCountry
                   ? "is-valid"
                   : ""
               }`}
               id="signupFormCountry"
-              name="country"
+              name="AddressCountry"
             />
             <ErrorMessage
-              name="country"
+              name="AddressCountry"
               render={(msg) => (
-                <InputFeedback invalid={errors.country && touched.country}>
+                <InputFeedback invalid={errors.AddressCountry && touched.AddressCountry}>
                   {msg}
                 </InputFeedback>
               )}
@@ -360,6 +370,7 @@ function Signup() {
             type="submit"
             className="btn btn-primary"
             disabled={isSubmitting}
+            style={{"minWidth": "80px"}}
           >
             {isSubmitting ? (
               <>
@@ -375,10 +386,11 @@ function Signup() {
             )}
           </button>
 
-          <div className="mt-4">
+          <div className="mt-4 mb-4">
             <Link to="/login">Already have an account? Sign-in here!</Link>
           </div>
         </Form>
+        </div>
       )}
     </Formik>
   );
