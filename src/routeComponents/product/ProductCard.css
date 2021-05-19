@@ -1,4 +1,4 @@
-.card-title{
+.card-title {
   margin-bottom: -20px;
 }
 
@@ -22,12 +22,16 @@
   height: 57px;
   max-height: 200%;
   font-size: 30px;
-  font-family: 'Abhaya Libre', serif;
-  color:#133f2f
+  font-family: "Abhaya Libre", serif;
+  color: #133f2f;
 }
 
 .card-text {
   font-size: 21px;
-  font-family: 'Abhaya Libre', serif;
-  color: #133f2f
+  font-family: "Abhaya Libre", serif;
+  color: #133f2f;
+}
+
+.card-bestCollor {
+  background-color: #133f2f;
 }

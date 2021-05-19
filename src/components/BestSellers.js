@@ -28,9 +28,9 @@ function BestSellers() {
     >
       <div />
       <div>
-        <h1 className="bt-title mt-5" style={{ left: "50%" }}>
+        <h2 className="bestSeller-title bt-title mt-5" style={{ left: "50%" }}>
           Best Sellers
-        </h1>
+        </h2>
       </div>
       <div className="row">
         {product
@@ -38,10 +38,10 @@ function BestSellers() {
             return (
               <div
                 key={product._id}
-                className="card card-fixed-height text-dark shadow rounded border-0 m-1 text-center my-5"
+                className="div-best card card-fixed-height text-dark border-0 m-1 text-center my-5"
                 style={{ width: "25%", height: "40%" }}
               >
-                <div>
+                <div className="div-best2 card-text card-bestCollor">
                   <ProductCard product={product} />
                 </div>
               </div>

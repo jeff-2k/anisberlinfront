@@ -32,6 +32,7 @@ function App() {
         <CartContextComponent>
           <Navbar />
           <Route exact path="/" component={VideoHome} />
+          <Route exact path="/" component={BestSellers} />
           <div className="container mt-5">
           <Route exact path="/" component={BestSellers} />
             <Switch>
