@@ -1,0 +1,31 @@
+.order-sucess h1{
+    text-align:left;
+    font-weight: bold;
+    font-size: 45px;
+    font-family: 'Abhaya Libre', serif;
+    color:#133f2f
+}
+
+.order-sucess p{
+    text-align:left;
+    margin-left: 0.5%;
+    font-size: 22px;
+    font-family: 'Abhaya Libre', serif;
+    color:#133f2f
+}
+
+.order-sucess small{
+    text-align:left;
+    margin-left: 0.5%;
+    font-size: 22px;
+    font-family: 'Abhaya Libre', serif;
+    color:#133f2f
+}
+
+.order-sucess a{
+    text-align:left;
+    margin-left: 0.5%;
+    font-size: 22px;
+    font-family: 'Abhaya Libre', serif;
+    color:#d4406a
+}

@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 import { CartContext } from "../../contexts/cartContext";
 import { AuthContext } from "../../contexts/authContext";
 
+import './OrderSuccess.css'
 import api from "../../apis/index";
+import background from '../../components/images/backgroundanis/background-signup-01.png'
 
 function OrderSuccess() {
   const { cart, setCart } = useContext(CartContext);
@@ -35,17 +37,20 @@ function OrderSuccess() {
   }, [cart, setCart, loggedInUser]);
 
   return (
-    <div>
+    <div className="order-sucess">
+    <img src={background} alt="background" class="bg" />
       <i
-        style={{ fontSize: "70px" }}
-        class="bi bi-check-circle-fill text-success"
+        style={{ fontSize: "500%" }}
+        className="bi bi-check-circle-fill text-success container-fluid"
       ></i>
 
-      <h1>Order Confirmed!</h1>
+      <h1 className="my-4">Order Confirmed!</h1>
 
-      <p>You will receive a confirmation soon.</p>
+      <p className="my-1">You will receive a confirmation soon.</p>
 
-      <small>Thanks for buying from us!</small>
+      <small >Thanks for buying from us!</small>
+
+      <br />
 
       <Link to="/profile">See your orders</Link>
     </div>

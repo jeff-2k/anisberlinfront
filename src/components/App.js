@@ -60,7 +60,6 @@ function App() {
               <Route exact path="/order/success" component={OrderSuccess} />
             </Switch>{" "}
             <Route exact path="/" component={BestSellers} />
-            <div></div>
           </div>
         </CartContextComponent>
       </AuthContextComponent>

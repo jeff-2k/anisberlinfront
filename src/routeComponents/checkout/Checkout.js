@@ -95,7 +95,7 @@ function Checkout() {
                   <h3>
                     {product.price.toLocaleString(
                       window.navigator.languages[0],
-                      { style: "currency", currency: "USD" }
+                      { style: "currency", currency: "EUR" }
                     )}
                   </h3>
                   <small>Quantity: {product.qtt}</small>
@@ -105,9 +105,11 @@ function Checkout() {
           );
         })}
 
-        <button className="buttonGreenOrder btn-lg mt-3" onClick={handleSubmit} style={{"minWidth": "120px"}}>
+        <button className="buttonGreenOrder btn-lg my-5" onClick={handleSubmit} style={{"minWidth": "120px"}}>
           Confirm Order
         </button>
+        <br/>
+        <div className="spacefooter my-5"></div>
       </div>
     </div>
   );
