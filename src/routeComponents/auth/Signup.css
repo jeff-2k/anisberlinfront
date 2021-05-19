@@ -45,3 +45,8 @@
     font-family: 'Abhaya Libre', serif;
     color: #d4406a
 }
+
+.signup .btn:hover{  
+    color: #f1a42d ;
+    background-color: #133f2f;
+  }
