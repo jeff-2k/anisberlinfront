@@ -3,34 +3,6 @@
   .row .col-12 {
     max-height: 550px;
   }
-
-  .div-best > .div-best {
-     width: 25%;
-     height: 40% 
-  }
-
-  .div-best .call h2 {
-    font-size: 27px;
-  }
-  
-  .div-best .call p {
-
-    font-size: 18px;
-
-  }
-}
-
-.call h2{
-  padding-top: 7%;
-  font-family: "Druk Wide Web Bold";
-  font-weight: bold;
-  font-size: 50px;
-}
-
-.call p {
-  font-family: "Abhaya Libre", serif;
-  font-size: 30px;
-  padding-bottom: 12%;
 }
 
 .bt-title {
