@@ -50,7 +50,7 @@ function BestSellers() {
               </div>
             );
           })
-          .filter((product, i) => i > 2 && i < 6)}
+          .filter((product, i) => i > 1 && i < 5)}
       </div>
     </div>
     
