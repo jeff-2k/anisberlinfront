@@ -46,15 +46,14 @@ function ProductDetails() {
   }, [id]);
 
   return (
-    <div className="detail">
+    <div className="details">
+    <img src={background} alt="background" class="bg"/>
     <div>
       <div className="detail  d-flex bd-highlight">
-      <img src={background} alt="background" class="bg"/>
       <img
-        className="card-img product-img mx-auto mt-5 imageDetail"
+        className="imageDetail card-img product-img mx-auto mt-5"
         src={state.image_url}
         alt="product-image"
-        style={{width: "35%"}}
       />
       <div className="details card-body mx-5">
 
@@ -70,16 +69,16 @@ function ProductDetails() {
 
         <div className="more-info mt-5">
         <p>
-          <strong className="mt-5">Gluten Free: {state.glutenFree}</strong>
+          <strong className="mt-5">Gluten Free:  {state.glutenFree}</strong>
         </p>
         <p>
-          <strong className="mr-5">Lactose Free: {state.lactoseFree}</strong>
+          <strong className="mr-5">Lactose Free:  {state.lactoseFree}</strong>
         </p>
         <p>
-          <strong className="mr-5">Sugar Free: {state.sugarFree}</strong>
+          <strong className="mr-5">Sugar Free:   {state.sugarFree}</strong>
         </p>
         <p>
-          <strong className="mr-5">Casein Free: {state.caseinFree}</strong>
+          <strong className="mr-5">Casein Free:   {state.caseinFree}</strong>
         </p>
         <p>
           <strong className="mr-5">Vegan: {state.vegan}</strong>
@@ -126,7 +125,7 @@ function ProductDetails() {
       </ConfirmationModal>
       
       {loggedInUser.user.role === "ADMIN" ? (
-        <div className="row d-flex justify-content-end">
+        <div className="row d-flex justify-content-end mr-2">
           <Link to={`/product/edit/${id}`} className="btn btn-warning mr-3">
             Edit
           </Link>

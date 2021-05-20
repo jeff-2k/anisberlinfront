@@ -1,51 +1,60 @@
   @media (max-width: 600px) {
-      .details {
+      .detail {
           display: flex;
           flex-direction: column;
       }
+      .detail img{
+        min-width: 80vw
+    }
+
+    .detail button {
+      position: relative;
+      right: 20%;
+      min-width: 40%;
+  }   
   }
 
-  .imageDetail {
-      width: 100%
+  .detail img{
+      width: 35vw
   }
 
-  .details h4 {
+  .detail h4 {
       font-weight: bold;
       font-size: 60px ;
       font-family: 'Abhaya Libre', serif;
       color:#133f2f   
   }
 
-  .details p {
+  .detail p {
       margin-top: -1%;
       font-size: 22px ;
       font-family: 'Abhaya Libre', serif;
       color:#133f2f
   }
 
-  .details strong {
+  .detail strong {
       font-size: 18px ;
       font-family: 'Abhaya Libre', serif;
       color:#d4406a
   }
 
-  .details h3 {
+  .detail h3 {
       font-size: 30px ;
       font-family: 'Abhaya Libre', serif;
       color:#133f2f
   }
 
-  .details label {
+  .detail label {
       font-size: 22px ;
       font-family: 'Abhaya Libre', serif;
       color:#133f2f
   }   
 
-  .details button {
+  .detail button {
       color: white;
       background-color: #133f2f;
   }
 
-  .details button:hover{  
+  .detail button:hover{  
       color: #f1a42d
     }
