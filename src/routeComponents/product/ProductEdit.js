@@ -3,6 +3,7 @@ import { useParams, useHistory } from "react-router-dom";
 
 import api from "../../apis/index";
 import ProductForm from "./ProductForm";
+import './ProductEdit.css'
 
 function ProductEdit() {
   const [state, setState] = useState({
@@ -84,7 +85,7 @@ function ProductEdit() {
   }
 
   return (
-    <div>
+    <div className="edit">
       <h1>Edit Product</h1>
 
       <hr />

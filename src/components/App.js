@@ -21,6 +21,7 @@ import Checkout from "../routeComponents/checkout/Checkout";
 import OrderSuccess from "../routeComponents/checkout/OrderSuccess";
 import VideoHome from "./VideoHome";
 
+
 import { AuthContextComponent } from "../contexts/authContext";
 import { CartContextComponent } from "../contexts/cartContext";
 import BestSellers from "./BestSellers";
@@ -34,7 +35,6 @@ function App() {
           <Route exact path="/" component={VideoHome} />
           <Route exact path="/" component={BestSellers} />
           <div className="container mt-5">
-          <Route exact path="/" component={BestSellers} />
             <Switch>
               <Route exact path="/" component={ProductFeed} />
               <Route exact path="/signup" component={Signup} />
