@@ -50,3 +50,7 @@
 	align-items: baseline;
 	align-content: stretch;
 }
+
+.creators img {
+  width: 20%;
+}
