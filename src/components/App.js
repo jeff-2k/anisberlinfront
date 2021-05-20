@@ -10,6 +10,7 @@ import ForgotPassword from "../routeComponents/auth/ForgotPassword";
 import ResetPassword from "../routeComponents/auth/ResetPassword";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import Mid from "./Mid"
 
 import ProductFeed from "../routeComponents/product/ProductFeed";
 import ProductDetail from "../routeComponents/product/ProductDetail";
@@ -33,6 +34,7 @@ function App() {
         <CartContextComponent>
           <Navbar />
           <Route exact path="/" component={VideoHome} />
+          <Route exact path='/' component={Mid}/>
           <Route exact path="/" component={BestSellers} />
           <div className="container mt-5">
             <Switch>

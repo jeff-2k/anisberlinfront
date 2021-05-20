@@ -28,10 +28,7 @@ function BestSellers() {
     >
       <div />
       <div className="row">
-      <div className="call text-center my-5 col-12 " >
-        <h2>FUNCTIONAL CONFECTIONERY</h2>
-        <p>Only with selected ingredients to bring the best benefits to your health.</p>
-        </div>
+      
         </div>
         <h2 className="bestSeller-title bt-title mt-5" style={{ left: "50%" }}>
           Best Sellers

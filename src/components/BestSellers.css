@@ -68,3 +68,28 @@
   align-items: center;
   color: #F1A42D;
 }
+
+.midBack {
+  background-color: #133F2F;
+  margin-top: -10px;
+  margin-bottom: -10px;
+  color: #F1A42D;
+  text-align:center
+}
+
+.midText h2{
+  padding-top: 65px;
+  text-align:center
+  
+}
+
+.midTitle {
+  text-align:center;
+  color: #F1A42D;
+  height: 57px;
+  max-height: 200%;
+  font-family: "Abhaya Libre", serif;
+  font-size: 50px;
+  padding-top: 50px;
+ 
+}

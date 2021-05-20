@@ -28,7 +28,7 @@ function ProductFeed() {
           <div
             key={product._id}
             className="col-12 col-sm-4 col-md-4 mx-auto"
-            style={{ "margin-bottom": "-18%" }}
+            style={{ "marginBottom": "-18%" }}
           >
             <ProductCard product={product} />
           </div>
