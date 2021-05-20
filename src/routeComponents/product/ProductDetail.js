@@ -58,15 +58,18 @@ function ProductDetails() {
           </button>
         </div>
       ) : null}
-      <img src={background} alt="background" class="bg" />
+
+      <div className="detail  d-flex bd-highlight">
+      <img src={background} alt="background" class="bg"/>
       <img
-        className="card-img product-img mx-auto mt-2 imageDetail"
+        className="card-img product-img mx-auto mt-5 imageDetail"
         src={state.image_url}
         alt="product-image"
+        style={{width: "35%"}}
       />
-      <div className="card-body">
+      <div className="details card-body mx-5">
 
-        <h4 className="card-title my-auto">
+        <h4 className="card-title my-auto mb-0">
           <small>{state.name}</small>
         </h4>
 
@@ -76,33 +79,33 @@ function ProductDetails() {
           </p>
         </div>
 
+        <div className="more-info mt-5">
+        <p>
+          <strong className="mt-5">Gluten Free: {state.glutenFree}</strong>
+        </p>
+        <p>
+          <strong className="mr-5">Lactose Free: {state.lactoseFree}</strong>
+        </p>
+        <p>
+          <strong className="mr-5">Sugar Free: {state.sugarFree}</strong>
+        </p>
+        <p>
+          <strong className="mr-5">Casein Free: {state.caseinFree}</strong>
+        </p>
+        <p>
+          <strong className="mr-5">Vegan: {state.vegan}</strong>
+        </p>
+        </div>
 
-        <p>
-          <small>Gluten Free: {state.glutenFree}</small>
-        </p>
-        <p>
-          <small>Lactose Free: {state.lactoseFree}</small>
-        </p>
-        <p>
-          <small>Sugar Free: {state.sugarFree}</small>
-        </p>
-        <p>
-          <small>Casein Free: {state.caseinFree}</small>
-        </p>
-        <p>
-          <small>Vegan: {state.vegan}</small>
-        </p>
 
-
-
-        <h3 className="card-text">
+        <h3 className="card-text mt-5 ">
           {Number(state.price).toLocaleString(window.navigator.languages[0], {
             style: "currency",
             currency: "EUR",
           })}
         </h3>
 
-        <div className="form-group d-inline-block mr-3">
+        <div className="form-group d-inline-block mr-3 ">
           <label htmlFor="productDetailQuantity">Quantity: </label>
           <input
             type="number"
@@ -113,7 +116,7 @@ function ProductDetails() {
           />
         </div>
         <button
-          className="btn btn-primary"
+          className="btn"
           onClick={() => {
             console.log(cart);
             if (quantity > 0 ) { setCart([...cart, { qtt: quantity, productId: id }]) };
@@ -131,6 +134,7 @@ function ProductDetails() {
       >
         <p>This action is irreversible. To confirm, click "Confirm".</p>
       </ConfirmationModal>
+    </div>
     </div>
   );
 }

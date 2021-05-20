@@ -20,8 +20,13 @@
   }
 }
 
+.call{
+  margin: 0;
+  padding: 0;
+}
+
 .call h2{
-  padding-top: 7%;
+
   font-family: "Druk Wide Web Bold";
   font-weight: bold;
   font-size: 50px;
@@ -53,6 +58,7 @@
   height: auto;
   padding-bottom: 15px;
   color: #f1a42d;
+  
 }
 
 .div-best {

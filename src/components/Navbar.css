@@ -82,3 +82,22 @@ i {
     color: #f1a42d; 
 }
 
+nav .dropdown-menu  {
+    color: #f1a42d; 
+}
+
+.dropdown-item.active{
+    color: #133f2f;
+    background-color: #f1a42d; 
+}
+
+nav .dropdown-menu  a:active{
+    color: #133f2f;
+    background-color: #f1a42d; 
+}
+
+a:hover{
+    color: white;
+}
+
+  

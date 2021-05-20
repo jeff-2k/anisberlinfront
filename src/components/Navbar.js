@@ -10,6 +10,7 @@ import { Link, animateScroll as scroll } from "react-scroll";
 import { AuthContext } from "../contexts/authContext";
 
 import Cart from "./Cart";
+import DropdownItem from "react-bootstrap/esm/DropdownItem";
 
 function Navbar() {
   const { loggedInUser, setLoggedInUser } = useContext(AuthContext);
@@ -49,26 +50,7 @@ function Navbar() {
         className="collapse navbar-collapse d-flex justify-content-center"
         id="navbarText"
       >
-        <ul className="navbar-nav mx-auto" style={{ maxWidth: "2.95%" }}>
-          {/* Esconder o link de quem não for Admin */}
-          {loggedInUser.user.role === "ADMIN" ? (
-            <li className="nav-item mx-auto">
-              <NavLink
-                className="nav-link"
-                activeClassName="active"
-                to="/create-product"
-              >
-                Create Product
-              </NavLink>
-            </li>
-          ) : null}
-
-          {/* <li className="nav-item">
-            <NavLink className="nav-link" activeClassName="active" to="/all">
-              All Products
-            </NavLink>
-          </li> */}
-        </ul>
+        
 
         <div
           className="logo d-flex mx-auto"
@@ -96,6 +78,24 @@ function Navbar() {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
+                <Dropdown.Item to="/create-product" as={NavLink}>
+                <ul className="navbar-nav danger">
+          {/* Esconder o link de quem não for Admin */}
+          {loggedInUser.user.role === "ADMIN" ? (
+            <li className="nav-item">
+              
+                Create Product
+            
+            </li>
+          ) : null}
+
+          {/* <li className="nav-item">
+            <NavLink className="nav-link" activeClassName="active" to="/all">
+              All Products
+            </NavLink>
+          </li> */}
+        </ul>
+                </Dropdown.Item>
                   <Dropdown.Item to="/profile" as={NavLink}>
                     Profile
                   </Dropdown.Item>
