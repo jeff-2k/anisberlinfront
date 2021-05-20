@@ -61,3 +61,11 @@
   font-weight: 100;
   color: white;
 }
+
+.footer .creators a:hover {
+  color: #f1a42d 
+}
+
+.footer .creators a:visited {
+  color: #f1a42d;
+}
