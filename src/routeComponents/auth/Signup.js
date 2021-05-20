@@ -187,26 +187,6 @@ function Signup() {
           </div>
 
           <div className="form-group">
-            <label htmlFor="signupFormName">House Number</label>
-            <Field
-              type="text"
-              className={`form-control ${
-                errors.AddressNum && touched.AddressNum ? "is-invalid" : "is-valid"
-              }`}
-              id="signupFormName"
-              name="AddressNum"
-            />
-            <ErrorMessage
-              name="AddressNum"
-              render={(msg) => (
-                <InputFeedback invalid={errors.AddressNum && touched.AddressNum}>
-                  {msg}
-                </InputFeedback>
-              )}
-            />
-          </div>
-
-          <div className="form-group">
             <label htmlFor="signupFormPhoneNumber">Phone Number</label>
             <Field
               type="text"
@@ -267,6 +247,26 @@ function Signup() {
               name="AddressStreet"
               render={(msg) => (
                 <InputFeedback invalid={errors.AddressStreet && touched.AddressStreet}>
+                  {msg}
+                </InputFeedback>
+              )}
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="signupFormName">House Number</label>
+            <Field
+              type="text"
+              className={`form-control ${
+                errors.AddressNum && touched.AddressNum ? "is-invalid" : "is-valid"
+              }`}
+              id="signupFormName"
+              name="AddressNum"
+            />
+            <ErrorMessage
+              name="AddressNum"
+              render={(msg) => (
+                <InputFeedback invalid={errors.AddressNum && touched.AddressNum}>
                   {msg}
                 </InputFeedback>
               )}
