@@ -46,73 +46,66 @@ function ProductDetails() {
   }, [id]);
 
   return (
-    <div >
-      <img src={background} alt="background" class="bg" />
-      <div className="row col-12 col-sm-12 col-md-12">
-        <div className="imageAlign">
-          <img
-            className="card-img product-img mx-auto mt-2 imageDetail"
-            src={state.image_url}
-            alt="product-image"
+    <div className="detail">
+    <div>
+      <div className="detail  d-flex bd-highlight">
+      <img src={background} alt="background" class="bg"/>
+      <img
+        className="card-img product-img mx-auto mt-5 imageDetail"
+        src={state.image_url}
+        alt="product-image"
+        style={{width: "35%"}}
+      />
+      <div className="details card-body mx-5">
+        <h4 className="card-title my-auto mb-0">
+          <small>{state.name}</small>
+        </h4>
+        <div>
+          <p>
+            <small> {state.description}</small>
+          </p>
+        </div>
+        <div className="more-info mt-5">
+        <p>
+          <strong className="mt-5">Gluten Free: {state.glutenFree}</strong>
+        </p>
+        <p>
+          <strong className="mr-5">Lactose Free: {state.lactoseFree}</strong>
+        </p>
+        <p>
+          <strong className="mr-5">Sugar Free: {state.sugarFree}</strong>
+        </p>
+        <p>
+          <strong className="mr-5">Casein Free: {state.caseinFree}</strong>
+        </p>
+        <p>
+          <strong className="mr-5">Vegan: {state.vegan}</strong>
+        </p>
+        </div>
+        <h3 className="card-text mt-5 ">
+          {Number(state.price).toLocaleString(window.navigator.languages[0], {
+            style: "currency",
+            currency: "EUR",
+          })}
+        </h3>
+        <div className="form-group d-inline-block mr-3 ">
+          <label htmlFor="productDetailQuantity">Quantity: </label>
+          <input
+            type="number"
+            id="productDetailQuantity"
+            className="form-control"
+            value={quantity}
+            onChange={(event) => setQuantity(Number(event.target.value))}
           />
         </div>
-        <div className="">
-          <div className="card-body descriptionContainer ">
-            <div>
-              <h4 className="card-title my-auto">
-                <small>{state.name}</small>
-              </h4>
-            </div>
-            <div>
-              <p>
-                <small> {state.description}</small>
-              </p>
-            </div>
-
-
-            <p>
-              <small>Gluten Free {state.glutenFree}</small>
-            </p>
-            <p>
-              <small>Lactose Free {state.lactoseFree}</small>
-            </p>
-            <p>
-              <small>Sugar Free {state.sugarFree}</small>
-            </p>
-            <p>
-              <small>Casein Free {state.caseinFree}</small>
-            </p>
-            <p>
-              <small>Vegan {state.vegan}</small>
-            </p>
-
-
-
-            <h3 className="card-text">
-              {Number(state.price).toLocaleString(window.navigator.languages[0], {
-                style: "currency",
-                currency: "EUR",
-              })}
-            </h3>
-
-            <div className="form-group d-inline-block mr-3">
-              <label htmlFor="productDetailQuantity">Quantity: </label>
-              <input
-                type="number"
-                id="productDetailQuantity"
-                className="form-control"
-                value={quantity}
-                onChange={(event) => setQuantity(Number(event.target.value))}
-              />
-            </div>
-            <button
-              className="btn buttonGreenOrder"
-              onClick={() => {
-                console.log(cart);
-                if (quantity > 0) { setCart([...cart, { qtt: quantity, productId: id }]) };
-              }}
-            >
-              Add to Cart
+        <button
+          className="btn"
+          onClick={() => {
+            console.log(cart);
+            if (quantity > 0 ) { setCart([...cart, { qtt: quantity, productId: id }]) };
+          }}
+        >
+          Add to Cart
         </button>
           </div>
         </div>
@@ -137,8 +130,6 @@ function ProductDetails() {
         </div>
       ) : null}
     </div>
-
   );
 }
-
 export default ProductDetails;
