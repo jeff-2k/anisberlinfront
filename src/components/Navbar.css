@@ -5,31 +5,25 @@
         margin-top: -50px;
         flex-wrap: nowrap;
     }
-
     nav img {
         margin-left: 40%;
     }
-
     nav .nav-link{
         margin-left: 30px;
     }
-
     button{
         max-width: 20%;
         margin-left: 50%;
     }
-
     i{
         margin-left: 120%;
         z-index: 1
     }
-
     .cart-link span{
         left: 71%;
         z-index: 1
     }
   }
-
 /*--- TABLET ---*/
 @media only screen and (min-device-width: 600px) and (max-device-width: 1000px) {
     #navbarText{
@@ -38,47 +32,50 @@
         flex-wrap: nowrap;
     }
 }
-
 /*--- DESKTOP ---*/
-
 /*---BACKGROUND---*/
 nav {
-    background-color: #133f2f;
+    background-color: #133F2F;
     max-height: 90px;
 }
-
 #dropdown-basic {
-    background-color: #133f2f;
+    background-color: #133F2F;
 }
-
 /*---ELEMENTS---*/
 nav a{
-    color: #f1a42d; 
+    color: #F1A42D;
     font-family: 'Abhaya Libre', serif;
     font-size: 120%;
 }
-
 nav img {
     max-height: 70px;
     justify-content: center;
     position: relative;
     left: 50%;
     top:5%
-    
-    
 }
-
 /*---DROPDOWN---*/
 nav .dropdown-menu {
-    background-color: #f1d190;
+    background-color: #F1D190;
 }
-
 nav .dropdown-menu a{
-    background-color: #f1d190;
-    color:  #133f2f;
+    background-color: #F1D190;
+    color:  #133F2F;
 }
-
 i {
-    color: #f1a42d; 
+    color: #F1A42D;
 }
-
+nav .dropdown-menu  {
+    color: #F1A42D;
+}
+.dropdown-item.active{
+    color: #133F2F;
+    background-color: #F1A42D;
+}
+nav .dropdown-menu  a:active{
+    color: #133F2F;
+    background-color: #F1A42D;
+}
+a:hover{
+    color: white;
+}

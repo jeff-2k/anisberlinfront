@@ -22,31 +22,28 @@ function BestSellers() {
 
   return (
     <div
-      className="div-best row col-12 col-sm-12 col-md-12 m-0 d-flex justify-content-center"
+      className="div-best m-0 d-flex justify-content-center flex-column align-items-center"
       id="bestseller"
       style={{ minWidth: "100%", marginTop: "-20%", height: "100%" }}
     >
       <div />
-      <div>
-        <div className="call text-center my-5">
-          <h2>FUNCTIONAL CONFECTIONERY</h2>
-          <p>
-            Only with selected ingredients to bring the best benefits to your
-            health.
-          </p>
+      <div className="row">
+      <div className="call text-center my-5 col-12 " >
+        <h2>FUNCTIONAL CONFECTIONERY</h2>
+        <p>Only with selected ingredients to bring the best benefits to your health.</p>
+        </div>
         </div>
         <h2 className="bestSeller-title bt-title mt-5" style={{ left: "50%" }}>
           Best Sellers
         </h2>
-      </div>
-      <div className="col-12 col-sm-12 col-md-12 d-flex justify-content-around">
+      <div className="row  ">
         {product
           .map((product) => {
             return (
               <div
                 key={product._id}
-                className="div-best card card-fixed-height text-dark border-0 m-1 text-center my-5 "
-                style={{ width: "25%", height: "40%" }}
+                className="div-best card card-fixed-height text-dark border-0 m-1 text-center my-5 col-12 col-sm-4 col-md-4 mx-auto "
+                style={{ width: "30vw", height: "auto" }}
               >
                 <div className="div-best2 card-text card-bestCollor ">
                   <ProductCard product={product} />
@@ -59,5 +56,4 @@ function BestSellers() {
     </div>
   );
 }
-
 export default BestSellers;

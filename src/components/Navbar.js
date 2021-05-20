@@ -32,7 +32,6 @@ function Navbar() {
           Sellers
         </Link>
       </Route>
-
       <button
         className="navbar-toggler"
         type="button"
@@ -44,32 +43,10 @@ function Navbar() {
       >
         <span className="navbar-toggler-icon"></span>
       </button>
-
       <div
         className="collapse navbar-collapse d-flex justify-content-center"
         id="navbarText"
       >
-        <ul className="navbar-nav mx-auto" style={{ maxWidth: "2.95%" }}>
-          {/* Esconder o link de quem não for Admin */}
-          {loggedInUser.user.role === "ADMIN" ? (
-            <li className="nav-item mx-auto">
-              <NavLink
-                className="nav-link"
-                activeClassName="active"
-                to="/create-product"
-              >
-                Create Product
-              </NavLink>
-            </li>
-          ) : null}
-
-          {/* <li className="nav-item">
-            <NavLink className="nav-link" activeClassName="active" to="/all">
-              All Products
-            </NavLink>
-          </li> */}
-        </ul>
-
         <div
           className="logo d-flex mx-auto"
           style={{ left: "50%", right: "50%" }}
@@ -80,12 +57,10 @@ function Navbar() {
             </NavLink>
           </div>
         </div>
-
         <div className="mr-3 mx-auto">
           {loggedInUser.user.name ? (
             <div className="d-flex align-items-center">
               <Cart />
-
               <Dropdown>
                 <Dropdown.Toggle variant="second" id="dropdown-basic">
                   <img
@@ -94,8 +69,22 @@ function Navbar() {
                     alt="Profile"
                   />
                 </Dropdown.Toggle>
-
                 <Dropdown.Menu>
+                <Dropdown.Item to="/create-product" as={NavLink}>
+                <ul className="navbar-nav danger">
+          {/* Esconder o link de quem não for Admin */}
+          {loggedInUser.user.role === "ADMIN" ? (
+            <li className="nav-item">
+                Create Product
+            </li>
+          ) : null}
+          {/* <li className="nav-item">
+            <NavLink className="nav-link" activeClassName="active" to="/all">
+              All Products
+            </NavLink>
+          </li> */}
+        </ul>
+                </Dropdown.Item>
                   <Dropdown.Item to="/profile" as={NavLink}>
                     Profile
                   </Dropdown.Item>
