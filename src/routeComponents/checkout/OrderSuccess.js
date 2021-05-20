@@ -52,7 +52,7 @@ function OrderSuccess() {
 
       <br />
 
-      <Link to="/profile">See your orders</Link>
+      <Link to="/profile">See your profile account</Link>
     </div>
   );
 }
