@@ -46,19 +46,8 @@ function ProductDetails() {
   }, [id]);
 
   return (
+    <div className="detail">
     <div>
-      {loggedInUser.user.role === "ADMIN" ? (
-        <div className="row d-flex justify-content-end">
-          <Link to={`/product/edit/${id}`} className="btn btn-warning mr-3">
-            Edit
-          </Link>
-          {/* Abrimos um modal de confirmação antes de deletar o produto */}
-          <button className="btn btn-danger" onClick={() => setShowModal(true)}>
-            Delete
-          </button>
-        </div>
-      ) : null}
-
       <div className="detail  d-flex bd-highlight">
       <img src={background} alt="background" class="bg"/>
       <img
@@ -124,8 +113,9 @@ function ProductDetails() {
         >
           Add to Cart
         </button>
+          </div>
+        </div>
       </div>
-
       <ConfirmationModal
         show={showModal}
         handleClose={() => setShowModal(false)}
@@ -134,8 +124,20 @@ function ProductDetails() {
       >
         <p>This action is irreversible. To confirm, click "Confirm".</p>
       </ConfirmationModal>
+      
+      {loggedInUser.user.role === "ADMIN" ? (
+        <div className="row d-flex justify-content-end">
+          <Link to={`/product/edit/${id}`} className="btn btn-warning mr-3">
+            Edit
+          </Link>
+          {/* Abrimos um modal de confirmação antes de deletar o produto */}
+          <button className="btn btn-danger" onClick={() => setShowModal(true)}>
+            Delete
+          </button>
+        </div>
+      ) : null}
     </div>
-    </div>
+  
   );
 }
 

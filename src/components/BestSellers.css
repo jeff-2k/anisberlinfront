@@ -3,43 +3,33 @@
   .row .col-12 {
     max-height: 550px;
   }
-
   .div-best > .div-best {
      width: 25%;
-     height: 40% 
+     height: 40%
   }
-
   .div-best .call h2 {
     font-size: 27px;
   }
-  
   .div-best .call p {
-
     font-size: 18px;
-
   }
 }
-
 .call{
   margin: 0;
   padding: 0;
 }
-
 .call h2{
-
   font-family: "Druk Wide Web Bold";
   font-weight: bold;
   font-size: 50px;
 }
-
 .call p {
   font-family: "Abhaya Libre", serif;
   font-size: 30px;
   padding-bottom: 12%;
 }
-
 .bt-title {
-  color: #f1a42d;
+  color: #F1A42D;
   height: 57px;
   max-height: 200%;
   font-family: "Abhaya Libre", serif;
@@ -52,35 +42,29 @@
   align-items: center;
   align-content: stretch;
 }
-
 .card-best {
   width: 50px;
   height: auto;
   padding-bottom: 15px;
-  color: #f1a42d;
-  
+  color: #F1A42D;
 }
-
 .div-best {
-  background-color: #133f2f;
+  background-color: #133F2F;
   position: relative;
   top: -6px;
-  color: #f1a42d;
+  color: #F1A42D;
 }
 .div-best .bestSeller-title h3 {
-  color: #f1a42d;
+  color: #F1A42D;
 }
-
 .div-best2 .card-body .card-title small {
-  color: #f1a42d;
+  color: #F1A42D;
 }
-
 .card-text h3 {
-  color: #f1a42d;
+  color: #F1A42D;
 }
-
 .div-best .card-bestCollor {
-  background-color: #133f2f;
+  background-color: #133F2F;
   align-items: center;
-  color: #f1a42d;
+  color: #F1A42D;
 }

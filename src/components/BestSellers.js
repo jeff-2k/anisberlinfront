@@ -20,7 +20,7 @@ function BestSellers() {
     fetchProduct();
   }, []);
 
-  return (        
+  return (
     <div
       className="div-best m-0 d-flex justify-content-center flex-column align-items-center"
       id="bestseller"
@@ -59,5 +59,4 @@ function BestSellers() {
     
   );
 }
-
 export default BestSellers;
