@@ -15,7 +15,7 @@ const stripePromise = loadStripe(
 );
 
 function Checkout() {
-  const { cart } = useContext(CartContext);
+  const { cart, setCart } = useContext(CartContext);
   const { loggedInUser } = useContext(AuthContext);
 
   const [state, setState] = useState([]);
@@ -76,6 +76,7 @@ function Checkout() {
       <div className="list-group">
         {state.map((product) => {
           return (
+            <div>
             <Link
               key={product._id}
               to={`/product/${product._id}`}
@@ -102,9 +103,18 @@ function Checkout() {
                 </div>
               </div>
             </Link>
+          
+          <button onClick={() => {
+              const index = cart.findIndex( (toDelete) => toDelete.productId === product._id)
+              const cartClone = [... cart]
+              if (index > -1){
+                cartClone.splice(index, 1)
+              setCart( [... cartClone] )
+              }
+           }}>Delete</button>
+          </div>
           );
         })}
-
         <button className="buttonGreenOrder btn-lg my-5" onClick={handleSubmit} style={{"minWidth": "120px"}}>
           Confirm Order
         </button>

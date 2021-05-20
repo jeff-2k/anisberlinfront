@@ -99,6 +99,7 @@ function ProductDetails() {
             type="number"
             id="productDetailQuantity"
             className="form-control"
+            min="0"
             value={quantity}
             onChange={(event) => setQuantity(Number(event.target.value))}
           />

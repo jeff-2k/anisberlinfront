@@ -17,10 +17,11 @@ function Navbar() {
 
   return (
     <nav className="navbar navbar-expand-lg d-flex bd-highlight  ">
+    <div className="w-25">
       <Route exact path="/">
         <Link
           href=""
-          className="nav-link "
+          className="nav-link my-5"
           activeClass="active"
           to="bestseller"
           spy={true}
@@ -31,6 +32,7 @@ function Navbar() {
           Best Sellers
         </Link>
       </Route>
+      </div>
       <button
         className="navbar-toggler"
         type="button"
@@ -49,7 +51,7 @@ function Navbar() {
         <div
           className="logo d-flex mx-auto"
         >
-          <div className="">
+          <div className="mr-5">
             <NavLink className="navbar-brand " to="/">
               <img src={Logo} alt="logo" />
             </NavLink>
