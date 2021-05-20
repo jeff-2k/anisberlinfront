@@ -28,6 +28,13 @@ function BestSellers() {
     >
       <div />
       <div>
+        <div className="call text-center my-5">
+          <h2>FUNCTIONAL CONFECTIONERY</h2>
+          <p>
+            Only with selected ingredients to bring the best benefits to your
+            health.
+          </p>
+        </div>
         <h2 className="bestSeller-title bt-title mt-5" style={{ left: "50%" }}>
           Best Sellers
         </h2>
@@ -38,10 +45,10 @@ function BestSellers() {
             return (
               <div
                 key={product._id}
-                className="div-best card card-fixed-height text-dark border-0 m-1 text-center my-5"
+                className="div-best card card-fixed-height text-dark border-0 m-1 text-center my-5 "
                 style={{ width: "25%", height: "40%" }}
               >
-                <div className="div-best2 card-text card-bestCollor">
+                <div className="div-best2 card-text card-bestCollor ">
                   <ProductCard product={product} />
                 </div>
               </div>
