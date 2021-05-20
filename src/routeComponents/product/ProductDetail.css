@@ -1,3 +1,35 @@
 .imageDetail {
-    width: 100%
+  width: 40%;
+}
+
+.imageAlign {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: stretch;
+}
+
+.descriptionContainer {
+  width: 50%;
+  
+
+}
+
+.itensCenter {
+  display: flex;
+  align-items: center;
+}
+
+.buttonGreenOrder {
+  border: #f1a42d;
+  background-color: #133f2f;
+  color: white;
+  
+}
+
+.buttonGreenOrder:hover{  
+  color: #f1a42d ;
+  background-color: #133f2f;
 }
