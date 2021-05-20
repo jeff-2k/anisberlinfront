@@ -16,11 +16,11 @@ function Navbar() {
   const { loggedInUser, setLoggedInUser } = useContext(AuthContext);
 
   return (
-    <nav className="navbar navbar-expand-lg d-flex justify-content-center mx-auto ">
+    <nav className="navbar navbar-expand-lg d-flex bd-highlight  ">
       <Route exact path="/">
         <Link
           href=""
-          className="nav-link"
+          className="nav-link "
           activeClass="active"
           to="bestseller"
           spy={true}
@@ -28,9 +28,7 @@ function Navbar() {
           offset={-70}
           duration={500}
         >
-          Best
-          <br />
-          Sellers
+          Best Sellers
         </Link>
       </Route>
       <button
@@ -50,15 +48,14 @@ function Navbar() {
       >
         <div
           className="logo d-flex mx-auto"
-          style={{ left: "50%", right: "50%" }}
         >
-          <div className="ml-5 mr-3 d-flex justify-content-center mx-auto">
-            <NavLink className="navbar-brand mx-auto" to="/">
+          <div className="">
+            <NavLink className="navbar-brand " to="/">
               <img src={Logo} alt="logo" />
             </NavLink>
           </div>
         </div>
-        <div className="mr-3 mx-auto">
+        <div className="mr-3">
           {loggedInUser.user.name ? (
             <div className="d-flex align-items-center">
               <Cart />
