@@ -13,28 +13,19 @@
   font-size: 50px;
   margin-bottom: -50px;
   display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  align-content: stretch;
+  height: 50%;
 }
 
 .card-best {
   width: 50px;
   height: auto;
   padding-bottom: 15px;
-  color: #f1a42d;
 }
 
 .div-best {
   background-color: #133f2f;
   position: relative;
   top: -6px;
-  color: #f1a42d;
-}
-.div-best .bestSeller-title h3 {
-  color: #f1a42d;
 }
 
 .div-best2 .card-body .card-title small {
@@ -48,5 +39,4 @@
 .div-best .card-bestCollor {
   background-color: #133f2f;
   align-items: center;
-  color: #f1a42d;
 }

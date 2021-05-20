@@ -22,9 +22,9 @@ function BestSellers() {
 
   return (
     <div
-      className="div-best row col-12 col-sm-4 col-md-4 m-0"
+      className="div-best row col-12 col-sm-12 col-md-12 m-0 d-flex justify-content-center"
       id="bestseller"
-      style={{ minWidth: "100%", marginTop: "-20%" }}
+      style={{ minWidth: "100%", marginTop: "-20%", height: "100%" }}
     >
       <div />
       <div>
@@ -32,7 +32,7 @@ function BestSellers() {
           Best Sellers
         </h2>
       </div>
-      <div className="row">
+      <div className="col-12 col-sm-12 col-md-12 d-flex justify-content-around">
         {product
           .map((product) => {
             return (
