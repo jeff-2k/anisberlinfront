@@ -57,14 +57,17 @@ function ProductDetails() {
         style={{width: "35%"}}
       />
       <div className="details card-body mx-5">
+
         <h4 className="card-title my-auto mb-0">
           <small>{state.name}</small>
         </h4>
+
         <div>
           <p>
             <small> {state.description}</small>
           </p>
         </div>
+
         <div className="more-info mt-5">
         <p>
           <strong className="mt-5">Gluten Free: {state.glutenFree}</strong>
@@ -82,12 +85,15 @@ function ProductDetails() {
           <strong className="mr-5">Vegan: {state.vegan}</strong>
         </p>
         </div>
+
+
         <h3 className="card-text mt-5 ">
           {Number(state.price).toLocaleString(window.navigator.languages[0], {
             style: "currency",
             currency: "EUR",
           })}
         </h3>
+
         <div className="form-group d-inline-block mr-3 ">
           <label htmlFor="productDetailQuantity">Quantity: </label>
           <input
@@ -118,6 +124,7 @@ function ProductDetails() {
       >
         <p>This action is irreversible. To confirm, click "Confirm".</p>
       </ConfirmationModal>
+      
       {loggedInUser.user.role === "ADMIN" ? (
         <div className="row d-flex justify-content-end">
           <Link to={`/product/edit/${id}`} className="btn btn-warning mr-3">
@@ -130,6 +137,7 @@ function ProductDetails() {
         </div>
       ) : null}
     </div>
+  
   );
 }
 export default ProductDetails;

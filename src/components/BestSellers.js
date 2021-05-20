@@ -24,16 +24,18 @@ function BestSellers() {
     <div
       className="div-best m-0 d-flex justify-content-center flex-column align-items-center"
       id="bestseller"
-      style={{ minWidth: "100%", marginTop: "-20%", height: "100%" }}
+      style={{ maxWidth: "100%", marginTop: "-20%", height: "100%" }}
     >
       <div />
       <div className="row">
       
         </div>
+
         <h2 className="bestSeller-title bt-title mt-5" style={{ left: "50%" }}>
           Best Sellers
         </h2>
-      <div className="row  ">
+      
+      <div className="row ">
         {product
           .map((product) => {
             return (
@@ -51,6 +53,7 @@ function BestSellers() {
           .filter((product, i) => i > 1 && i < 5)}
       </div>
     </div>
+    
   );
 }
 export default BestSellers;

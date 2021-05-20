@@ -10,6 +10,7 @@ import { Link, animateScroll as scroll } from "react-scroll";
 import { AuthContext } from "../contexts/authContext";
 
 import Cart from "./Cart";
+import DropdownItem from "react-bootstrap/esm/DropdownItem";
 
 function Navbar() {
   const { loggedInUser, setLoggedInUser } = useContext(AuthContext);
