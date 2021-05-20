@@ -78,19 +78,19 @@ function ProductDetails() {
 
 
         <p>
-          <small>Gluten Free {state.glutenFree}</small>
+          <small>Gluten Free: {state.glutenFree}</small>
         </p>
         <p>
-          <small>Lactose Free {state.lactoseFree}</small>
+          <small>Lactose Free: {state.lactoseFree}</small>
         </p>
         <p>
-          <small>Sugar Free {state.sugarFree}</small>
+          <small>Sugar Free: {state.sugarFree}</small>
         </p>
         <p>
-          <small>Casein Free {state.caseinFree}</small>
+          <small>Casein Free: {state.caseinFree}</small>
         </p>
         <p>
-          <small>Vegan {state.vegan}</small>
+          <small>Vegan: {state.vegan}</small>
         </p>
 
 

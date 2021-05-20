@@ -34,6 +34,7 @@
   }
 }
 
+/*--- TABLET & DESKTOP---*/
 .buttonGreenOrder {
   border: #f1a42d;
   background-color: #133f2f;
@@ -42,7 +43,8 @@
 }
 
 .Order h5{
-  font-size: 30px;
+  margin-top: 15%;
+  font-size: 40px;
   font-family: 'Abhaya Libre', serif;
   color:#133f2f
 }
