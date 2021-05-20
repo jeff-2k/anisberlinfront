@@ -19,8 +19,7 @@ function ProductCreate() {
     caseinFree: "",
     vegan: "",    
     price: 0,
-    image_url: "",
-    transactions: "",   
+    image_url: "",     
   });
 
   function handleChange(event) {
