@@ -46,85 +46,7 @@ function ProductDetails() {
   }, [id]);
 
   return (
-    <div >
-      <img src={background} alt="background" class="bg" />
-      <div className="row col-12 col-sm-12 col-md-12">
-        <div className="imageAlign">
-          <img
-            className="card-img product-img mx-auto mt-2 imageDetail"
-            src={state.image_url}
-            alt="product-image"
-          />
-        </div>
-        <div className="">
-          <div className="card-body descriptionContainer ">
-            <div>
-              <h4 className="card-title my-auto">
-                <small>{state.name}</small>
-              </h4>
-            </div>
-            <div>
-              <p>
-                <small> {state.description}</small>
-              </p>
-            </div>
-
-
-            <p>
-              <small>Gluten Free {state.glutenFree}</small>
-            </p>
-            <p>
-              <small>Lactose Free {state.lactoseFree}</small>
-            </p>
-            <p>
-              <small>Sugar Free {state.sugarFree}</small>
-            </p>
-            <p>
-              <small>Casein Free {state.caseinFree}</small>
-            </p>
-            <p>
-              <small>Vegan {state.vegan}</small>
-            </p>
-
-
-
-            <h3 className="card-text">
-              {Number(state.price).toLocaleString(window.navigator.languages[0], {
-                style: "currency",
-                currency: "EUR",
-              })}
-            </h3>
-
-            <div className="form-group d-inline-block mr-3">
-              <label htmlFor="productDetailQuantity">Quantity: </label>
-              <input
-                type="number"
-                id="productDetailQuantity"
-                className="form-control"
-                value={quantity}
-                onChange={(event) => setQuantity(Number(event.target.value))}
-              />
-            </div>
-            <button
-              className="btn buttonGreenOrder"
-              onClick={() => {
-                console.log(cart);
-                if (quantity > 0) { setCart([...cart, { qtt: quantity, productId: id }]) };
-              }}
-            >
-              Add to Cart
-        </button>
-          </div>
-        </div>
-      </div>
-      <ConfirmationModal
-        show={showModal}
-        handleClose={() => setShowModal(false)}
-        handleConfirm={() => history.push(`/product/delete/${id}`)}
-        title="Are you sure you want to delete this product?"
-      >
-        <p>This action is irreversible. To confirm, click "Confirm".</p>
-      </ConfirmationModal>
+    <div>
       {loggedInUser.user.role === "ADMIN" ? (
         <div className="row d-flex justify-content-end">
           <Link to={`/product/edit/${id}`} className="btn btn-warning mr-3">
@@ -136,8 +58,80 @@ function ProductDetails() {
           </button>
         </div>
       ) : null}
-    </div>
+      <img src={background} alt="background" class="bg" />
+      <img
+        className="card-img product-img mx-auto mt-2 imageDetail"
+        src={state.image_url}
+        alt="product-image"
+      />
+      <div className="card-body">
 
+        <h4 className="card-title my-auto">
+          <small>{state.name}</small>
+        </h4>
+
+        <div>
+          <p>
+            <small> {state.description}</small>
+          </p>
+        </div>
+
+
+        <p>
+          <small>Gluten Free {state.glutenFree}</small>
+        </p>
+        <p>
+          <small>Lactose Free {state.lactoseFree}</small>
+        </p>
+        <p>
+          <small>Sugar Free {state.sugarFree}</small>
+        </p>
+        <p>
+          <small>Casein Free {state.caseinFree}</small>
+        </p>
+        <p>
+          <small>Vegan {state.vegan}</small>
+        </p>
+
+
+
+        <h3 className="card-text">
+          {Number(state.price).toLocaleString(window.navigator.languages[0], {
+            style: "currency",
+            currency: "EUR",
+          })}
+        </h3>
+
+        <div className="form-group d-inline-block mr-3">
+          <label htmlFor="productDetailQuantity">Quantity: </label>
+          <input
+            type="number"
+            id="productDetailQuantity"
+            className="form-control"
+            value={quantity}
+            onChange={(event) => setQuantity(Number(event.target.value))}
+          />
+        </div>
+        <button
+          className="btn btn-primary"
+          onClick={() => {
+            console.log(cart);
+            if (quantity > 0 ) { setCart([...cart, { qtt: quantity, productId: id }]) };
+          }}
+        >
+          Add to Cart
+        </button>
+      </div>
+
+      <ConfirmationModal
+        show={showModal}
+        handleClose={() => setShowModal(false)}
+        handleConfirm={() => history.push(`/product/delete/${id}`)}
+        title="Are you sure you want to delete this product?"
+      >
+        <p>This action is irreversible. To confirm, click "Confirm".</p>
+      </ConfirmationModal>
+    </div>
   );
 }
 

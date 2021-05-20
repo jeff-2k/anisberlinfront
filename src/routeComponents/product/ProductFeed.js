@@ -20,8 +20,6 @@ function ProductFeed() {
   }, []);
 
   return (
-    <div className="product-feed">
-    <h2 className="all-products d-flex justify-content-center">All Products</h2>
     <div className="row">
       {product.map((product) => {
         return (
@@ -34,7 +32,6 @@ function ProductFeed() {
           </div>
         );
       })}
-    </div>
     </div>
   );
 }
