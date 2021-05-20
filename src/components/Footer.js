@@ -54,10 +54,10 @@ const Footer = (props) => {
 
 
         <div className='creators col ml-5 mt-0 '>
-        <h4 className="d-flex justify-content-start ml-5">CREATED BY:</h4> 
+        <h4 className="d-flex justify-content-start ml-5 ">CREATED BY:</h4> 
 
-        <div className="creators-name col-10 ml-4">
-        <a href="https://www.linkedin.com/in/elvis-dourado-9507a490/" className='linkdin mr-5' style={{marginRight: "10px"}}>
+        <div className="creators-name col-10 ml-4  align-items-center">
+        <a href="https://www.linkedin.com/in/elvis-dourado-9507a490/" className='linkdin'>
         Elvis Dourado
         <img src={LinkedinLogo} alt='linkedin-creator-logo'/>
         </a>
