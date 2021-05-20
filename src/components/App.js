@@ -21,6 +21,7 @@ import Checkout from "../routeComponents/checkout/Checkout";
 import OrderSuccess from "../routeComponents/checkout/OrderSuccess";
 import VideoHome from "./VideoHome";
 
+
 import { AuthContextComponent } from "../contexts/authContext";
 import { CartContextComponent } from "../contexts/cartContext";
 import BestSellers from "./BestSellers";
