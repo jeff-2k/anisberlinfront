@@ -1,0 +1,15 @@
+@media (max-width: 600px) {
+    .midText {
+        height: auto;
+    }
+  }
+
+  .midText h2 {
+    font-family: "Abhaya Libre", serif;
+    font-size: 48px;
+  }
+
+  .midText span {
+    font-family: "Abhaya Libre", serif;
+    font-size: 28px;
+  }

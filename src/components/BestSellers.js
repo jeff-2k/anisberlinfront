@@ -22,12 +22,12 @@ function BestSellers() {
 
   return (
     <div
-      className="div-best m-0 d-flex justify-content-center flex-column align-items-center"
+      className="div-best m-0 d-flex justify-content-center flex-column align-items-center pt-5"
       id="bestseller"
       style={{ maxWidth: "100%", marginTop: "-20%", height: "100%" }}
     >
       <div />
-      <div className="row">
+      <div className="row mt-5">
       
         </div>
 
@@ -44,13 +44,13 @@ function BestSellers() {
                 className="div-best card card-fixed-height text-dark border-0 m-1 text-center my-5 col-12 col-sm-4 col-md-4 mx-auto "
                 style={{ width: "30vw", height: "auto" }}
               >
-                <div className="div-best2 card-text card-bestCollor ">
+                <div className="div-best2 card-text card-bestCollor mt-0">
                   <ProductCard product={product} />
                 </div>
               </div>
             );
           })
-          .filter((product, i) => i > 1 && i < 5)}
+          .filter((product, i) => i > 0 && i < 4)}
       </div>
     </div>
     
