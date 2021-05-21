@@ -13,11 +13,11 @@ function ProductCreate() {
   const [state, setState] = useState({
     name: "",
     description: "",
-    glutenFree: "",
-    lactoseFree: "",
-    sugarFree: "",
-    caseinFree: "",
-    vegan: "",    
+    glutenFree: "yes",
+    lactoseFree: "yes",
+    sugarFree: "yes",
+    caseinFree: "yes",
+    vegan: "yes",    
     price: 0,
     image_url: "",   
       
