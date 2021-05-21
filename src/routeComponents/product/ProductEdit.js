@@ -16,7 +16,7 @@ function ProductEdit() {
     vegan: "",    
     price: 0,
     image_url: "",
-    transactions: "",  
+   
   });
 
   const { id } = useParams();
