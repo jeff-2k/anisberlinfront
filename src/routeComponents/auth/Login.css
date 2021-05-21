@@ -2,7 +2,7 @@
 @media (max-width: 600px) {
     .login button {
         position: relative;
-        right: 12%;
+        left: 1%;
     }   
   }
 

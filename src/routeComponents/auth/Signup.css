@@ -2,7 +2,7 @@
 @media (max-width: 600px) {
     .signup button {
         position: relative;
-        right: 11%;
+        left: 1%;
     }   
   }
 

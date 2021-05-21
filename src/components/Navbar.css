@@ -38,6 +38,12 @@
         top: -70%;
         right: -100%; 
     }
+
+     nav .login-ref a {
+        position: absolute;
+        top: 32.5%;
+        left: 77%; 
+    }
   }
 
   
