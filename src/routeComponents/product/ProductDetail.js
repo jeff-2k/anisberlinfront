@@ -105,7 +105,7 @@ function ProductDetails() {
           />
         </div>
         <button
-          className="btn"
+          className="add btn"
           onClick={() => {
             console.log(cart);
             if (quantity > 0 ) { setCart([...cart, { qtt: quantity, productId: id }]) };

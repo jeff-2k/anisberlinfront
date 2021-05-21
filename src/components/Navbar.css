@@ -5,25 +5,42 @@
         margin-top: -50px;
         flex-wrap: nowrap;
     }
-    nav img {
-        margin-left: 40%;
+
+    .nav .collapse {
+        width: 0;
     }
-    nav .nav-link{
-        margin-left: 30px;
+  
+    nav .nav-link {
+        position: absolute;
+        left: -40px;
+        top: 30px
     }
-    button{
-        max-width: 20%;
-        margin-left: 50%;
+
+    nav .cart-link {
+        position: absolute;
+        top: 30%;
+        right: 20%;
     }
-    i{
-        margin-left: 120%;
-        z-index: 1
+
+    nav .logo .navbar-brand img {
+        left: 43%;
+        top:10%
     }
-    .cart-link span{
-        left: 71%;
-        z-index: 1
+
+    nav .d-flex #dropdown-basic img{
+        position: absolute;
+        top: 5%;
+        right: 5%; 
+    }
+
+    nav .dropdown-toggle{
+        position: relative;
+        top: -70%;
+        right: -100%; 
     }
   }
+
+  
 /*--- TABLET ---*/
 @media only screen and (min-device-width: 600px) and (max-device-width: 1000px) {
     #navbarText{
@@ -31,32 +48,73 @@
         margin-top: -50px;
         flex-wrap: nowrap;
     }
+
+    nav .nav-link {
+        position: absolute;
+        left: 10px;
+        top: 30px
+    }
+
+    nav .cart-link {
+        position: absolute;
+        top: 30%;
+        right: 20%;
+    }
+
+    nav .d-flex #dropdown-basic .rounded-circle{
+        position: absolute;
+        top: 8%;
+        right: 7%; 
+    }
+
+
+    nav .dropdown-toggle{
+        position: relative;
+        top: -70%;
+        right: -60%; 
+    }
+
+    
+
 }
+
 /*--- DESKTOP ---*/
-/*---BACKGROUND---*/
+
 nav {
     background-color: #133F2F;
+    min-height: 90px;
     max-height: 90px;
 }
 #dropdown-basic {
     background-color: #133F2F;
 }
+
+nav #dropdown-basic img{
+    position: absolute;
+    top: 8%;
+    right: 7%; 
+}
 /*---ELEMENTS---*/
+
+
 nav a{
     color: #F1A42D;
     font-family: 'Abhaya Libre', serif;
     font-size: 120%;
 }
-nav img {
+nav .logo img {
+    margin-left: auto;
     max-height: 70px;
     justify-content: center;
-    position: relative;
-    left: 50%;
-    top:5%
+    position:absolute;
+    left: 47.5%;
+    top:10%;
+    padding: 0;
 }
 /*---DROPDOWN---*/
 nav .dropdown-menu {
     background-color: #F1D190;
+    
 }
 nav .dropdown-menu a{
     background-color: #F1D190;

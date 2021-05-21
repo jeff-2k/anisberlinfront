@@ -82,7 +82,7 @@ function Checkout() {
               to={`/product/${product._id}`}
               className="list-group-item list-group-item-action"
             >
-              <div className="d-flex w-100 justify-content-between row">
+              <div className="order d-flex w-100 justify-content-between row">
                 <div className="col-4">
                   <img
                     className="mw-100"
@@ -101,10 +101,7 @@ function Checkout() {
                   </h3>
                   <small>Quantity: {product.qtt}</small>
                 </div>
-              </div>
-            </Link>
-          
-          <button onClick={() => {
+                <button className="del btn btn-danger mx-auto mt-2" onClick={() => {
               const index = cart.findIndex( (toDelete) => toDelete.productId === product._id)
               const cartClone = [... cart]
               if (index > -1){
@@ -112,6 +109,8 @@ function Checkout() {
               setCart( [... cartClone] )
               }
            }}>Delete</button>
+             </div>
+            </Link>
           </div>
           );
         })}

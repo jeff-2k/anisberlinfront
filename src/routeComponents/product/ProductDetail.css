@@ -12,6 +12,13 @@
       right: 20%;
       min-width: 40%;
   }   
+
+  .details > .add   {
+    position: relative;
+    right: -20%;
+    margin-top: 5%;
+    margin-bottom: 10%;
+  }
   }
 
   .detail img{

@@ -32,6 +32,16 @@
     font-family: 'Abhaya Libre', serif;
     color:#133f2f
   }
+
+  .order .del {
+    position: relative;
+    left: 17%;
+  }
+
+  .list-group button {
+    position: relative;
+    right: 1%;
+}   
 }
 
 /*--- TABLET & DESKTOP---*/
@@ -84,3 +94,4 @@
   color: #f1a42d ;
   background-color: #133f2f;
 }
+

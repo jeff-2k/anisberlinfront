@@ -45,11 +45,11 @@
 /*--- BACKGROUND ---*/
 img.bg {
   /* Set rules to fill background */
-  min-height: 100%;
+  min-height: 100vh;
   min-width: 1024px;
 
   /* Set up proportionate scaling */
-  width: 100%;
+  width: 100vw;
   height: auto;
 
   /* Set up positioning */
@@ -62,11 +62,11 @@ img.bg {
 
 div.admin-bg {
   /* Set rules to fill background */
-  min-height: 100%;
+  min-height: 100vh;
   min-width: 1024px;
 
   /* Set up proportionate scaling */
-  width: 100%;
+  width: 100vw;
   height: auto;
 
   /* Set up positioning */
