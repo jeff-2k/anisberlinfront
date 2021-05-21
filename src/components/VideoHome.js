@@ -2,7 +2,7 @@ import Video from '../components/video/header--anis-16x9-v2.mp4'
 
 function VideoHome (){
     return (
-    <video autoPlay loop muted playsinline
+    <video autoPlay loop muted playsinline autobuffer
             style={{
               position: "relative",
               width: "100%", 
